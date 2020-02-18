@@ -1,0 +1,487 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>7.10.3077</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C79750FD-6AE1-400F-BF98-D32E074CD39A}</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon />
+    <AssemblyKeyContainerName />
+    <AssemblyName>Application.Enterprise.CommonObjects</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Application.Enterprise.CommonObjects</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>ObjetosComunes.xml</DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Clases\AmarrePremioInfo.cs" />
+    <Compile Include="Clases\AmarreReglaInfo.cs" />
+    <Compile Include="Clases\AmarresInfo.cs" />
+    <Compile Include="Clases\ArtExcentosxCiudadInfo.cs" />
+    <Compile Include="Clases\ArticuloExeceptoIvaInfo.cs" />
+    <Compile Include="Clases\AsistenteInfo.cs" />
+    <Compile Include="Clases\BodegasInfo.cs" />
+    <Compile Include="Clases\AuditoriaInfo.cs" />
+    <Compile Include="Clases\AuditoriaNegativosInfo.cs" />
+    <Compile Include="Clases\AuditoriaPedidosInfo.cs" />
+    <Compile Include="Clases\AuditoriaReservaInfo.cs" />
+    <Compile Include="Clases\AuditoriaSaldosBodegaInfo.cs" />
+    <Compile Include="Clases\AutenticationRequest.cs" />
+    <Compile Include="Clases\BarriosInfo.cs" />
+    <Compile Include="Clases\BloquearProductoInfo.cs" />
+    <Compile Include="Clases\CambiosDetalleInfo.cs" />
+    <Compile Include="Clases\CambiosInfo.cs" />
+    <Compile Include="Clases\CampanaInfo.cs" />
+    <Compile Include="Clases\CampanaListInfo.cs" />
+    <Compile Include="Clases\CatalogoInfo.cs" />
+    <Compile Include="Clases\CatalogoInteresInfo.cs" />
+    <Compile Include="Clases\CatalogoPluInfo.cs" />
+    <Compile Include="Clases\CentroCostosInfo.cs" />
+    <Compile Include="Clases\CentroOperacionInfo.cs" />
+    <Compile Include="Clases\CiclosInfo.cs" />
+    <Compile Include="Clases\CicloxPluInfo.cs" />
+    <Compile Include="Clases\CiudadInfo.cs" />
+    <Compile Include="Clases\CiudadSVDNInfo.cs" />
+    <Compile Include="Clases\clasificacionPorValorInfo.cs" />
+    <Compile Include="Clases\ClasificacionXValorAlarmaInfo.cs" />
+    <Compile Include="Clases\ClasificacionXValorProcesoInfo.cs" />
+    <Compile Include="Clases\ClienteCriteriosClasificacionSiesaInfo.cs" />
+    <Compile Include="Clases\ClienteEntidadDinamicaSiesaInfo.cs" />
+    <Compile Include="Clases\ClienteImpuestosRetencionesSiesaInfo.cs" />
+    <Compile Include="Clases\ClienteInfo.cs" />
+    <Compile Include="Clases\ClientePuntosEnvioSiesaInfo.cs" />
+    <Compile Include="Clases\ClienteSaldoInfo.cs" />
+    <Compile Include="Clases\ClienteSiesaInfo.cs" />
+    <Compile Include="Clases\ClienteTerceroSiesaInfo.cs" />
+    <Compile Include="Clases\ColorInfo.cs" />
+    <Compile Include="Clases\ComoTeEnterasteInfo.cs" />
+    <Compile Include="Clases\ConfigurationInstrumentsView.cs" />
+    <Compile Include="Clases\ConfigurationParameters.cs" />
+    <Compile Include="Clases\ContactenosInfo.cs" />
+    <Compile Include="Clases\CostoMercanciaInfo.cs" />
+    <Compile Include="Clases\CxCInfo.cs" />
+    <Compile Include="Clases\CxVNitsInfo.cs" />
+    <Compile Include="Clases\DescuentoInfo.cs" />
+    <Compile Include="Clases\DescuentoPrivilegioInfo.cs" />
+    <Compile Include="Clases\DesmanteladasInfo.cs" />
+    <Compile Include="Clases\DespachosInfo.cs" />
+    <Compile Include="Clases\DespachosVInfo.cs" />
+    <Compile Include="Clases\DevolucionesDetalleInfo.cs" />
+    <Compile Include="Clases\DevolucionesInfo.cs" />
+    <Compile Include="Clases\DevolucionReservaEnLineaInfo.cs" />
+    <Compile Include="Clases\DocumentoMvtoEntidadDinamicaSiesaInfo.cs" />
+    <Compile Include="Clases\EmailEnviadosInfo.cs" />
+    <Compile Include="Clases\EmailMensajesInfo.cs" />
+    <Compile Include="Clases\EmailSmtpClientInfo.cs" />
+    <Compile Include="Clases\ExceptionErrorInfo.cs" />
+    <Compile Include="Clases\Error.cs" />
+    <Compile Include="Clases\EstadoInfo.cs" />
+    <Compile Include="Clases\EstadosClienteInfo.cs" />
+    <Compile Include="Clases\EstadosPedidoInfo.cs" />
+    <Compile Include="Clases\EstadosPremiosInfo.cs" />
+    <Compile Include="Clases\FacebookUser.cs" />
+    <Compile Include="Clases\FacturaDetalleInfo.cs" />
+    <Compile Include="Clases\FacturaInfo.cs" />
+    <Compile Include="Clases\FieldMapping.cs" />
+    <Compile Include="Clases\FleteLiderInfo.cs" />
+    <Compile Include="Clases\GeografiaEcuInfo.cs" />
+    <Compile Include="Clases\GerenteRegionalInfo.cs" />
+    <Compile Include="Clases\GrupoProductoInfo.cs" />
+    <Compile Include="Clases\GruposInfo.cs" />
+    <Compile Include="Clases\GruposUsuariosInfo.cs" />
+    <Compile Include="Clases\HistoricoClienteComparacionInfo.cs" />
+    <Compile Include="Clases\HistoricoClienteInfo.cs" />
+    <Compile Include="Clases\HistoricoClienteResumenInfo.cs" />
+    <Compile Include="Clases\InfoClave.cs" />
+    <Compile Include="Clases\InfoCliente.cs" />
+    <Compile Include="Clases\InfoUsuario.cs" />
+    <Compile Include="Clases\IntermediarioInfo.cs" />
+    <Compile Include="Clases\InventarioInfo.cs" />
+    <Compile Include="Clases\InventarioMktInfo.cs" />
+    <Compile Include="Clases\KardexInfo.cs" />
+    <Compile Include="Clases\LiberarMemoriaSQLInfo.cs" />
+    <Compile Include="Clases\LideresInfo.cs" />
+    <Compile Include="Clases\PuntosSavedInfo.cs" />
+    <Compile Include="Clases\LiderInfo.cs" />
+    <Compile Include="Clases\LocalidadInfo.cs" />
+    <Compile Include="Clases\MailGroupInfo.cs" />
+    <Compile Include="Clases\MailPlanActividadDetalleInfo.cs" />
+    <Compile Include="Clases\MailPlanActividadInfo.cs" />
+    <Compile Include="Clases\MailPlanEventoInfo.cs" />
+    <Compile Include="Clases\MailPlanInfo.cs" />
+    <Compile Include="Clases\MatrizComercialInfo.cs" />
+    <Compile Include="Clases\MatrizComercialMetaInfo.cs" />
+    <Compile Include="Clases\MotivoDevolInfo.cs" />
+    <Compile Include="Clases\NivelServicioInfo.cs" />
+    <Compile Include="Clases\Originator.cs" />
+    <Compile Include="Clases\Enumerations.cs" />
+    <Compile Include="Clases\PaisInfo.cs" />
+    <Compile Include="Clases\ParametroConfiguracion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Clases\ParametrosInfo.cs" />
+    <Compile Include="Clases\PedidosClienteInfo.cs" />
+    <Compile Include="Clases\PedidosDetalleClienteInfo.cs" />
+    <Compile Include="Clases\PedidosDetallesSIESA_SVDNinfo.cs" />
+    <Compile Include="Clases\PedidoSiesaDescuentosInfo.cs" />
+    <Compile Include="Clases\PedidoSiesaImpuestosInfo.cs" />
+    <Compile Include="Clases\PedidoSiesaMovtoPedidosInfo.cs" />
+    <Compile Include="Clases\PedidosProcessInfo.cs" />
+    <Compile Include="Clases\PedidosSiesaInfo.cs" />
+    <Compile Include="Clases\PedidosxPremioInfo.cs" />
+    <Compile Include="Clases\PermisoInfo.cs" />
+    <Compile Include="Clases\PLUInfo.cs" />
+    <Compile Include="Clases\PorcentajesMatrizInfo.cs" />
+    <Compile Include="Clases\PremiosArticulosInfo.cs" />
+    <Compile Include="Clases\PremiosCampoOperadorInfo.cs" />
+    <Compile Include="Clases\PremiosCamposInfo.cs" />
+    <Compile Include="Clases\PremiosCondicionesInfo.cs" />
+    <Compile Include="Clases\PremiosInfo.cs" />
+    <Compile Include="Clases\PremiosNivelesInfo.cs" />
+    <Compile Include="Clases\PremiosOperadoresInfo.cs" />
+    <Compile Include="Clases\PremiosPremiosInfo.cs" />
+    <Compile Include="Clases\PremiosPuntosConfInfo.cs" />
+    <Compile Include="Clases\PremiosPuntosTotalInfo.cs" />
+    <Compile Include="Clases\PremiosPuntosTotalSepInfo.cs" />
+    <Compile Include="Clases\PremiosPuntosValorInfo.cs" />
+    <Compile Include="Clases\PremiosPuntosWinformsInfo.cs" />
+    <Compile Include="Clases\PremiosQueryInfo.cs" />
+    <Compile Include="Clases\PremiosTablasInfo.cs" />
+    <Compile Include="Clases\PremiosWinformInfo.cs" />
+    <Compile Include="Clases\PremiosWinformPedidoInfo.cs" />
+    <Compile Include="Clases\ProcesamientosCampanaInfo.cs" />
+    <Compile Include="Clases\ProcesamientosTipoInfo.cs" />
+    <Compile Include="Clases\ProductosCatalogoInfo.cs" />
+    <Compile Include="Clases\PuntoReordenInfo.cs" />
+    <Compile Include="Clases\PuntosInfo.cs" />
+    <Compile Include="Clases\PuntosTotalEmpreInfo.cs" />
+    <Compile Include="Clases\RegionalesInfo.cs" />
+    <Compile Include="Clases\RegionxZonaInfo.cs" />
+    <Compile Include="Clases\ReglaJAInfo.cs" />
+    <Compile Include="Clases\ReglaPremiosInfo.cs" />
+    <Compile Include="Clases\ReglaPuntoInfo.cs" />
+    <Compile Include="Clases\ReglasCampoOperadorInfo.cs" />
+    <Compile Include="Clases\ReglasCamposInfo.cs" />
+    <Compile Include="Clases\ReglasCondicionesInfo.cs" />
+    <Compile Include="Clases\ReglasInfo.cs" />
+    <Compile Include="Clases\ReglasOperadoresInfo.cs" />
+    <Compile Include="Clases\ReglasQueryInfo.cs" />
+    <Compile Include="Clases\ReglasTablasInfo.cs" />
+    <Compile Include="Clases\ReportePedidosInfo.cs" />
+    <Compile Include="Clases\ReporteVentasInfo.cs" />
+    <Compile Include="Clases\RetencionIcaInfo.cs" />
+    <Compile Include="Clases\SaldosBodegaInfo.cs" />
+    <Compile Include="Clases\SaldosInfo.cs" />
+    <Compile Include="Clases\SearchCondition.cs" />
+    <Compile Include="Clases\SessionEmpresariaInfo.cs" />
+    <Compile Include="Clases\SessionUserInfo.cs" />
+    <Compile Include="Clases\SectorInfo.cs" />
+    <Compile Include="Clases\SectorxBarrioInfo.cs" />
+    <Compile Include="Clases\SectorZonaInfo.cs" />
+    <Compile Include="Clases\SmtpMailInfo.cs" />
+    <Compile Include="Clases\SustitutosInfo.cs" />
+    <Compile Include="Clases\TableMapping.cs" />
+    <Compile Include="Clases\TallaInfo.cs" />
+    <Compile Include="Clases\TarifaIVAInfo.cs" />
+    <Compile Include="Clases\TerceroSiesaInfo.cs" />
+    <Compile Include="Clases\TipoCategoriaCCNInfo.cs" />
+    <Compile Include="Clases\TipoDocumentoInfo.cs" />
+    <Compile Include="Clases\TipoPedidoMinimoInfo.cs" />
+    <Compile Include="Clases\TipoRedInfo.cs" />
+    <Compile Include="Clases\TipoTransportadoraInfo.cs" />
+    <Compile Include="Clases\TipoVisitaInfo.cs" />
+    <Compile Include="Clases\Tools.cs" />
+    <Compile Include="Clases\Topmenos20Info.cs" />
+    <Compile Include="Clases\Transaction.cs" />
+    <Compile Include="Clases\TransportistaInfo.cs" />
+    <Compile Include="Clases\TrasladoDetInfo.cs" />
+    <Compile Include="Clases\TrasladoEncInfo.cs" />
+    <Compile Include="Clases\TrasladoFleteCiudadInfo.cs" />
+    <Compile Include="Clases\TrasladoPresupuestoMatrizInfo.cs" />
+    <Compile Include="Clases\UnidadesInfo.cs" />
+    <Compile Include="Clases\Usuario.cs" />
+    <Compile Include="Clases\UsuariosInfo.cs" />
+    <Compile Include="Clases\UsuarioVendedorInfo.cs" />
+    <Compile Include="Clases\Utilidades.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Clases\VendedorInfo.cs" />
+    <Compile Include="Clases\VisitaEmpresariaInfo.cs" />
+    <Compile Include="Clases\VisitaPositivaInfo.cs" />
+    <Compile Include="Clases\ZonaInfo.cs" />
+    <Compile Include="Clases\ZonaPeruInfo.cs" />
+    <Compile Include="Clases\ZonasModeloFacturacionInfo.cs" />
+    <Compile Include="Clases\ZonasMultiPedidosInfo.cs" />
+    <Compile Include="Clases\ZonasPremiosInfo.cs" />
+    <Compile Include="Clases\ZonasReservaEnLineaInfo.cs" />
+    <Compile Include="Clases\ZonaxCiudadInfo.cs" />
+    <Compile Include="Interfaces\IAgotados.cs" />
+    <Compile Include="Interfaces\IAmarres.cs" />
+    <Compile Include="Interfaces\IArtExcentosxCiudad.cs" />
+    <Compile Include="Interfaces\IArticuloExeceptoIva.cs" />
+    <Compile Include="Interfaces\IAsistente.cs" />
+    <Compile Include="Interfaces\IBodegas.cs" />
+    <Compile Include="Interfaces\IAuditoria.cs" />
+    <Compile Include="Interfaces\IAuditoriaNegativos.cs" />
+    <Compile Include="Interfaces\IAuditoriaPedidos.cs" />
+    <Compile Include="Interfaces\IAuditoriaReserva.cs" />
+    <Compile Include="Interfaces\IAuditoriaSaldosBodega.cs" />
+    <Compile Include="Interfaces\IBarrios.cs" />
+    <Compile Include="Interfaces\IBloquearProducto.cs" />
+    <Compile Include="Interfaces\ICambios.cs" />
+    <Compile Include="Interfaces\ICambiosDetalle.cs" />
+    <Compile Include="Interfaces\ICampana.cs" />
+    <Compile Include="Interfaces\ICatalogo.cs" />
+    <Compile Include="Interfaces\ICatalogoInteres.cs" />
+    <Compile Include="Interfaces\ICatalogoPlu.cs" />
+    <Compile Include="Interfaces\ICentroCostos.cs" />
+    <Compile Include="Interfaces\ICentroOperacion.cs" />
+    <Compile Include="Interfaces\ICicloxPlu.cs" />
+    <Compile Include="Interfaces\ICiudad.cs" />
+    <Compile Include="Interfaces\ICiudadSVDN.cs" />
+    <Compile Include="Interfaces\IClasificacionPorValor.cs" />
+    <Compile Include="Interfaces\IClasificacionXValorAlarma.cs" />
+    <Compile Include="Interfaces\IClasificacionXValorProceso.cs" />
+    <Compile Include="Interfaces\ICliente.cs" />
+    <Compile Include="Interfaces\IClienteEcu.cs" />
+    <Compile Include="Interfaces\IClienteSaldo.cs" />
+    <Compile Include="Interfaces\IColor.cs" />
+    <Compile Include="Interfaces\ICommercialMatrix.cs" />
+    <Compile Include="Interfaces\IComoTeEnteraste.cs" />
+    <Compile Include="Interfaces\IContactenos.cs" />
+    <Compile Include="Interfaces\ICostoMercancia.cs" />
+    <Compile Include="Interfaces\ICxC.cs" />
+    <Compile Include="Interfaces\IDescuento.cs" />
+    <Compile Include="Interfaces\IDescuentoGlod.cs" />
+    <Compile Include="Interfaces\IDescuentoPrivilegio.cs" />
+    <Compile Include="Interfaces\IDespachos.cs" />
+    <Compile Include="Interfaces\IDevoluciones.cs" />
+    <Compile Include="Interfaces\IDevolucionesDetalle.cs" />
+    <Compile Include="Interfaces\IDevolucionReservaEnLinea.cs" />
+    <Compile Include="Interfaces\IEfectyx.cs" />
+    <Compile Include="Interfaces\IEmailEnviados.cs" />
+    <Compile Include="Interfaces\IEmailMensajes.cs" />
+    <Compile Include="Interfaces\IEmailSmtpClient.cs" />
+    <Compile Include="Interfaces\IEstado.cs" />
+    <Compile Include="Interfaces\IEstadosCliente.cs" />
+    <Compile Include="Interfaces\IEstadosPedido.cs" />
+    <Compile Include="Interfaces\IFactura.cs" />
+    <Compile Include="Interfaces\IFacturaDetalle.cs" />
+    <Compile Include="Interfaces\IFleteLider.cs" />
+    <Compile Include="Interfaces\IGeografiaEcu.cs" />
+    <Compile Include="Interfaces\IGerenteRegional.cs" />
+    <Compile Include="Interfaces\IGrupoProducto.cs" />
+    <Compile Include="Interfaces\IGrupos.cs" />
+    <Compile Include="Interfaces\IGruposUsuarios.cs" />
+    <Compile Include="Interfaces\IHistoricoCliente.cs" />
+    <Compile Include="Interfaces\IHistoricoClienteResumen.cs" />
+    <Compile Include="Interfaces\IIntermediario.cs" />
+    <Compile Include="Interfaces\IInventario.cs" />
+    <Compile Include="Interfaces\IInventarioMkt.cs" />
+    <Compile Include="Interfaces\IKardex.cs" />
+    <Compile Include="Interfaces\ILiberarMemoriaSQL.cs" />
+    <Compile Include="Interfaces\IPuntosSaved.cs" />
+    <Compile Include="Interfaces\ILider.cs" />
+    <Compile Include="Interfaces\ILideres.cs" />
+    <Compile Include="Interfaces\ILocalidad.cs" />
+    <Compile Include="Interfaces\IMail.cs" />
+    <Compile Include="Interfaces\IMailGroup.cs" />
+    <Compile Include="Interfaces\IMailPlan.cs" />
+    <Compile Include="Interfaces\IMailPlanActividad.cs" />
+    <Compile Include="Interfaces\IMailPlanActividadDetalle.cs" />
+    <Compile Include="Interfaces\IMailPlanEvento.cs" />
+    <Compile Include="Interfaces\IMatrizComercial.cs" />
+    <Compile Include="Interfaces\IMatrizComercialJA.cs" />
+    <Compile Include="Interfaces\IMatrizComercialMeta.cs" />
+    <Compile Include="Interfaces\IMatrizComercialWinService.cs" />
+    <Compile Include="Interfaces\IMezcla.cs" />
+    <Compile Include="Interfaces\INivelServicio.cs" />
+    <Compile Include="Interfaces\IPais.cs" />
+    <Compile Include="Interfaces\IParametros.cs" />
+    <Compile Include="Interfaces\IPedidosCliente.cs" />
+    <Compile Include="Interfaces\IPedidosDetalleCliente.cs" />
+    <Compile Include="Interfaces\IPedidosxPremio.cs" />
+    <Compile Include="Interfaces\IPermiso.cs" />
+    <Compile Include="Interfaces\IPLU.cs" />
+    <Compile Include="Interfaces\IPorcentajesMatriz.cs" />
+    <Compile Include="Interfaces\IPremios.cs" />
+    <Compile Include="Interfaces\IPremiosArticulos.cs" />
+    <Compile Include="Interfaces\IPremiosCampoOperador.cs" />
+    <Compile Include="Interfaces\IPremiosCampos.cs" />
+    <Compile Include="Interfaces\IPremiosCondiciones.cs" />
+    <Compile Include="Interfaces\IPremiosNiveles.cs" />
+    <Compile Include="Interfaces\IPremiosOperadores.cs" />
+    <Compile Include="Interfaces\IPremiosPuntosConf.cs" />
+    <Compile Include="Interfaces\IPremiosPuntosTotal.cs" />
+    <Compile Include="Interfaces\IPremiosPuntosTotalSep.cs" />
+    <Compile Include="Interfaces\IPremiosPuntosValor.cs" />
+    <Compile Include="Interfaces\IPremiosPuntosWinforms.cs" />
+    <Compile Include="Interfaces\IPremiosSVDN.cs" />
+    <Compile Include="Interfaces\IPremiosTablas.cs" />
+    <Compile Include="Interfaces\IPremiosWinform.cs" />
+    <Compile Include="Interfaces\IProcesamientosCampana.cs" />
+    <Compile Include="Interfaces\IProcesamientosTipo.cs" />
+    <Compile Include="Interfaces\IProductosCatalogo.cs" />
+    <Compile Include="Interfaces\IPuntoReorden.cs" />
+    <Compile Include="Interfaces\IPuntos.cs" />
+    <Compile Include="Interfaces\IRegionales.cs" />
+    <Compile Include="Interfaces\IRegionxZona.cs" />
+    <Compile Include="Interfaces\IReglas.cs" />
+    <Compile Include="Interfaces\IReglasCampoOperador.cs" />
+    <Compile Include="Interfaces\IReglasCampos.cs" />
+    <Compile Include="Interfaces\IReglasCondiciones.cs" />
+    <Compile Include="Interfaces\IReglasJA.cs" />
+    <Compile Include="Interfaces\IReglasOperadores.cs" />
+    <Compile Include="Interfaces\IReglasPremios.cs" />
+    <Compile Include="Interfaces\IReglasPuntos.cs" />
+    <Compile Include="Interfaces\IReglasTablas.cs" />
+    <Compile Include="Interfaces\IReportePedidos.cs" />
+    <Compile Include="Interfaces\IReporteVentas.cs" />
+    <Compile Include="Interfaces\IReservaEnLinea.cs" />
+    <Compile Include="Interfaces\IReservaEnLineaDevolucion.cs" />
+    <Compile Include="Interfaces\IReservaEnLineaGlod.cs" />
+    <Compile Include="Interfaces\IRetencionIca.cs" />
+    <Compile Include="Interfaces\ISaldos.cs" />
+    <Compile Include="Interfaces\ISaldosBodega.cs" />
+    <Compile Include="Interfaces\ISector.cs" />
+    <Compile Include="Interfaces\ISectorxBarrio.cs" />
+    <Compile Include="Interfaces\ISectorZona.cs" />
+    <Compile Include="Interfaces\ISustitutos.cs" />
+    <Compile Include="Interfaces\ITalla.cs" />
+    <Compile Include="Interfaces\ITarifaIVA.cs" />
+    <Compile Include="Interfaces\ITipoCategoriaCCN.cs" />
+    <Compile Include="Interfaces\ITipoDocumento.cs" />
+    <Compile Include="Interfaces\ITipoPedidoMinimo.cs" />
+    <Compile Include="Interfaces\ITipoRed.cs" />
+    <Compile Include="Interfaces\ITipoTransportadora.cs" />
+    <Compile Include="Interfaces\ITipoVisita.cs" />
+    <Compile Include="Interfaces\ITopMenos20.cs" />
+    <Compile Include="Interfaces\ITransportista.cs" />
+    <Compile Include="Interfaces\ITrasladoDet.cs" />
+    <Compile Include="Interfaces\ITrasladoEnc.cs" />
+    <Compile Include="Interfaces\ITrasladoFleteCiudad.cs" />
+    <Compile Include="Interfaces\ITrasladoPresupuestoMatriz.cs" />
+    <Compile Include="Interfaces\IUnidades.cs" />
+    <Compile Include="Interfaces\IExceptionError.cs" />
+    <Compile Include="Interfaces\IUsuarios.cs" />
+    <Compile Include="Interfaces\IUsuarioVendedor.cs" />
+    <Compile Include="Interfaces\IVendedor.cs" />
+    <Compile Include="Interfaces\IVisitaEmpresaria.cs" />
+    <Compile Include="Interfaces\IVisitaPositiva.cs" />
+    <Compile Include="Interfaces\IZona.cs" />
+    <Compile Include="Interfaces\IZonasModeloFacturacion.cs" />
+    <Compile Include="Interfaces\IZonasMultiPedidos.cs" />
+    <Compile Include="Interfaces\IZonasReservaEnLinea.cs" />
+    <Compile Include="Interfaces\IZonaxCiudad.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>

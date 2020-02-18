@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>7.10.3077</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AEE6963B-6B34-4FB9-8A14-664EB17C2DC8}</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon />
+    <AssemblyKeyContainerName />
+    <AssemblyName>Application.Enterprise.Business</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Application.Enterprise.Business</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Application.Enterprise.CommonObjects\Application.Enterprise.CommonObjects.csproj">
+      <Name>Application.Enterprise.CommonObjects</Name>
+      <Project>{C79750FD-6AE1-400F-BF98-D32E074CD39A}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Application.Enterprise.Data\Application.Enterprise.Data.csproj">
+      <Project>{65357ee6-8e0b-45c7-9b95-99294e25136c}</Project>
+      <Name>Application.Enterprise.Data</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Name>Microsoft.VisualBasic</Name>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Clases\Agotados.cs" />
+    <Compile Include="Clases\AmarresBo.cs" />
+    <Compile Include="Clases\ArtExcentosxCiudad.cs" />
+    <Compile Include="Clases\ArticuloExeceptoIva.cs" />
+    <Compile Include="Clases\Asistente.cs" />
+    <Compile Include="Clases\Bodegas.cs" />
+    <Compile Include="Clases\Auditoria.cs" />
+    <Compile Include="Clases\AuditoriaNegativos.cs" />
+    <Compile Include="Clases\AuditoriaPedidos.cs" />
+    <Compile Include="Clases\AuditoriaReserva.cs" />
+    <Compile Include="Clases\AuditoriaSaldosBodega.cs" />
+    <Compile Include="Clases\Barrios.cs" />
+    <Compile Include="Clases\BloqueaDesmanteladoras.cs" />
+    <Compile Include="Clases\Cambios.cs" />
+    <Compile Include="Clases\CambiosDetalle.cs" />
+    <Compile Include="Clases\Campana.cs" />
+    <Compile Include="Clases\Catalogo.cs" />
+    <Compile Include="Clases\CatalogoInteres.cs" />
+    <Compile Include="Clases\CatalogoPlu.cs" />
+    <Compile Include="Clases\CentroCostos.cs" />
+    <Compile Include="Clases\CentroOperacion.cs" />
+    <Compile Include="Clases\Ciclos.cs" />
+    <Compile Include="Clases\CicloxPlu.cs" />
+    <Compile Include="Clases\Ciudad.cs" />
+    <Compile Include="Clases\CiudadSVDN.cs" />
+    <Compile Include="Clases\ClasificacionPorValor.cs" />
+    <Compile Include="Clases\ClasificacionXValorAlarma.cs" />
+    <Compile Include="Clases\ClasificacionXValorProceso.cs" />
+    <Compile Include="Clases\Cliente.cs" />
+    <Compile Include="Clases\ClienteEcu.cs" />
+    <Compile Include="Clases\ClienteSaldo.cs" />
+    <Compile Include="Clases\Color.cs" />
+    <Compile Include="Clases\CommercialMatrix.cs" />
+    <Compile Include="Clases\ComoTeEnteraste.cs" />
+    <Compile Include="Clases\ConfiguracionInstrumentos.cs" />
+    <Compile Include="Clases\Contactenos.cs" />
+    <Compile Include="Clases\CostoMercancia.cs" />
+    <Compile Include="Clases\CxC.cs" />
+    <Compile Include="Clases\Descuento.cs" />
+    <Compile Include="Clases\DescuentoGlod.cs" />
+    <Compile Include="Clases\DescuentoPrivilegio.cs" />
+    <Compile Include="Clases\Despachos.cs" />
+    <Compile Include="Clases\Device.cs" />
+    <Compile Include="Clases\Devoluciones.cs" />
+    <Compile Include="Clases\DevolucionesDetalle.cs" />
+    <Compile Include="Clases\DevolucionReservaEnLinea.cs" />
+    <Compile Include="Clases\Efectyx.cs" />
+    <Compile Include="Clases\EmailEnviados.cs" />
+    <Compile Include="Clases\EmailMensajes.cs" />
+    <Compile Include="Clases\EmailSmtpClient.cs" />
+    <Compile Include="Clases\Estado.cs" />
+    <Compile Include="Clases\EstadosCliente.cs" />
+    <Compile Include="Clases\EstadosPedido.cs" />
+    <Compile Include="Clases\Factura.cs" />
+    <Compile Include="Clases\FacturaDetalle.cs" />
+    <Compile Include="Clases\FleteLider.cs" />
+    <Compile Include="Clases\GeografiaEcu.cs" />
+    <Compile Include="Clases\GerenteRegional.cs" />
+    <Compile Include="Clases\GrupoProducto.cs" />
+    <Compile Include="Clases\Grupos.cs" />
+    <Compile Include="Clases\GruposUsuarios.cs" />
+    <Compile Include="Clases\HistoricoCliente.cs" />
+    <Compile Include="Clases\HistoricoClienteResumen.cs" />
+    <Compile Include="Clases\Intermediario.cs" />
+    <Compile Include="Clases\Inventario.cs" />
+    <Compile Include="Clases\InventarioMkt.cs" />
+    <Compile Include="Clases\Kardex.cs" />
+    <Compile Include="Clases\LiberarMemoriaSQL.cs" />
+    <Compile Include="Clases\PuntosSaved.cs" />
+    <Compile Include="Clases\Lider.cs" />
+    <Compile Include="Clases\Lideres.cs" />
+    <Compile Include="Clases\Localidad.cs" />
+    <Compile Include="Clases\Mail.cs" />
+    <Compile Include="Clases\MailGroup.cs" />
+    <Compile Include="Clases\MailPlan.cs" />
+    <Compile Include="Clases\MailPlanActividad.cs" />
+    <Compile Include="Clases\MailPlanActividadDetalle.cs" />
+    <Compile Include="Clases\MailPlanEvento.cs" />
+    <Compile Include="Clases\MatrizComercial.cs" />
+    <Compile Include="Clases\MatrizComercialJA.cs" />
+    <Compile Include="Clases\MatrizComercialMeta.cs" />
+    <Compile Include="Clases\MatrizComercialWinService.cs" />
+    <Compile Include="Clases\Mezcla.cs" />
+    <Compile Include="Clases\MotivoDevol.cs" />
+    <Compile Include="Clases\NivelServicio.cs" />
+    <Compile Include="Clases\Pais.cs" />
+    <Compile Include="Clases\ParametroConfiguracion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Clases\Parametros.cs" />
+    <Compile Include="Clases\PedidosCliente.cs" />
+    <Compile Include="Clases\PedidosDetalleCliente.cs" />
+    <Compile Include="Clases\PedidosManager.cs" />
+    <Compile Include="Clases\PedidosReviewer.cs" />
+    <Compile Include="Clases\PedidosxPremio.cs" />
+    <Compile Include="Clases\Permiso.cs" />
+    <Compile Include="Clases\PLU.cs" />
+    <Compile Include="Clases\PorcentajesMatriz.cs" />
+    <Compile Include="Clases\Premios.cs" />
+    <Compile Include="Clases\PremiosArticulos.cs" />
+    <Compile Include="Clases\PremiosCampoOperador.cs" />
+    <Compile Include="Clases\PremiosCampos.cs" />
+    <Compile Include="Clases\PremiosCondiciones.cs" />
+    <Compile Include="Clases\PremiosNiveles.cs" />
+    <Compile Include="Clases\PremiosOperadores.cs" />
+    <Compile Include="Clases\PremiosPuntosConf.cs" />
+    <Compile Include="Clases\PremiosPuntosTotal.cs" />
+    <Compile Include="Clases\PremiosPuntosTotalSep.cs" />
+    <Compile Include="Clases\PremiosPuntosValor.cs" />
+    <Compile Include="Clases\PremiosPuntosWinforms.cs" />
+    <Compile Include="Clases\PremiosSVDN.cs" />
+    <Compile Include="Clases\PremiosTablas.cs" />
+    <Compile Include="Clases\PremiosWinform.cs" />
+    <Compile Include="Clases\ProcesamientosCampana.cs" />
+    <Compile Include="Clases\ProcesamientosTipo.cs" />
+    <Compile Include="Clases\ProductosCatalogo.cs" />
+    <Compile Include="Clases\PuntoReorden.cs" />
+    <Compile Include="Clases\PuntosBo.cs" />
+    <Compile Include="Clases\Regionales.cs" />
+    <Compile Include="Clases\RegionxZona.cs" />
+    <Compile Include="Clases\Reglas.cs" />
+    <Compile Include="Clases\ReglasCampoOperador.cs" />
+    <Compile Include="Clases\ReglasCampos.cs" />
+    <Compile Include="Clases\ReglasCondiciones.cs" />
+    <Compile Include="Clases\ReglasJA.cs" />
+    <Compile Include="Clases\ReglasOperadores.cs" />
+    <Compile Include="Clases\ReglasPremios.cs" />
+    <Compile Include="Clases\ReglasPuntos.cs" />
+    <Compile Include="Clases\ReglasTablas.cs" />
+    <Compile Include="Clases\ReportePedidos.cs" />
+    <Compile Include="Clases\ReporteVentas.cs" />
+    <Compile Include="Clases\ReservaEnLinea.cs" />
+    <Compile Include="Clases\ReservaEnLineaDevolucion.cs" />
+    <Compile Include="Clases\ReservaEnLineaGlod.cs" />
+    <Compile Include="Clases\RetencionIca.cs" />
+    <Compile Include="Clases\Saldos.cs" />
+    <Compile Include="Clases\SaldosBodega.cs" />
+    <Compile Include="Clases\Sector.cs" />
+    <Compile Include="Clases\SectorxBarrio.cs" />
+    <Compile Include="Clases\SectorZona.cs" />
+    <Compile Include="Clases\Sustitutos.cs" />
+    <Compile Include="Clases\Talla.cs" />
+    <Compile Include="Clases\TarifaIVA.cs" />
+    <Compile Include="Clases\TipoCategoriaCCN.cs" />
+    <Compile Include="Clases\TipoDocumento.cs" />
+    <Compile Include="Clases\TipoPedidoMinimo.cs" />
+    <Compile Include="Clases\TipoRed.cs" />
+    <Compile Include="Clases\TipoTransportadora.cs" />
+    <Compile Include="Clases\TipoVisita.cs" />
+    <Compile Include="Clases\TopMenos20.cs" />
+    <Compile Include="Clases\Transportista.cs" />
+    <Compile Include="Clases\TrasladoDet.cs" />
+    <Compile Include="Clases\TrasladoEnc.cs" />
+    <Compile Include="Clases\TrasladoFletesCiudad.cs" />
+    <Compile Include="Clases\TrasladoPresupuestoMatriz.cs" />
+    <Compile Include="Clases\Unidades.cs" />
+    <Compile Include="Clases\ExceptionError.cs" />
+    <Compile Include="Clases\Usuarios.cs" />
+    <Compile Include="Clases\UsuarioVendedor.cs" />
+    <Compile Include="Clases\Vendedor.cs" />
+    <Compile Include="Clases\VisitaEmpresaria.cs" />
+    <Compile Include="Clases\VisitaPositiva.cs" />
+    <Compile Include="Clases\Zona.cs" />
+    <Compile Include="Clases\ZonasModeloFacturacion.cs" />
+    <Compile Include="Clases\ZonasMultiPedidos.cs" />
+    <Compile Include="Clases\ZonasReservaEnLinea.cs" />
+    <Compile Include="Clases\ZonaxCiudad.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>
