@@ -24,6 +24,8 @@ namespace Application.Enterprise.CommonObjects.Interfaces
         /// <returns></returns>
         ClienteInfo ListxNIT(string nit);
 
+ 
+
         /// <summary>
         /// lista un Cliente de SVDN especifico por nit.
         /// </summary>

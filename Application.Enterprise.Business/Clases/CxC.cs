@@ -63,6 +63,16 @@ namespace Application.Enterprise.Business
         {
             return module.ListCxCVendedor(Vendedor);
         }
+
+        /// <summary>
+        /// Lista el saldo de cartera de una empresaria por nit y por mes.
+        /// </summary>
+        /// <param name="Vendedor"></param>
+        /// <returns></returns>
+        public List<CxCInfo> ListCxCLider(string Lider)
+        {
+            return module.ListCxCLider(Lider);
+        }
         #endregion
     }
 }

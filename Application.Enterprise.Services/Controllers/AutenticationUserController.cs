@@ -585,33 +585,51 @@ namespace Application.Enterprise.Services.Controllers
                     */
                     #endregion
                     #region "SERVICIO AL CLIENTE (SAC)"
-                    /*else if (ObjUsuarioInfo.IdGrupo == Convert.ToString((int)NIVI.Application.Enterprise.CommonObjects.GruposUsuariosEnum.ServicioCliente))
+                    else if (ObjUsuarioInfo.IdGrupo == Convert.ToString((int)Application.Enterprise.CommonObjects.Enumerations.GruposUsuariosEnum.ServicioCliente))
                     {
-
+                        /*
                         Session["Usuario"] = ObjUsuarioInfo.Clave.ToString().Trim();
                         Session["NombreUsuario"] = ObjUsuario.DesencriptarCadena(ObjUsuarioInfo.Descripcion.ToString().Trim());
                         Session["IdGrupo"] = Convert.ToString((int)NIVI.Application.Enterprise.CommonObjects.GruposUsuariosEnum.ServicioCliente);
                         Session["Grupo"] = ObjUsuarioInfo.NombreGrupo;
                         Session["Email"] = ObjUsuarioInfo.Email.ToString().Trim();
                         Session["ClaveUsuario"] = txtPwd.Value.Trim();
-
-                        Session["MostrarTermyCond"] = "false";
+                        */
+                        ObjSessionUserInfo.Cedula = ObjUsuarioInfo.Usuario.ToString().Trim();
+                        //Session["Usuario"] = ObjVendedorInfo.IdVendedor.ToString().Trim();
+                        ObjSessionUserInfo.Usuario = ObjUsuarioInfo.Clave.ToString().Trim();
+                        ObjSessionUserInfo.NombreUsuario = ObjUsuarioInfo.NombreUsuario.ToString().Trim();
+                        ObjSessionUserInfo.IdGrupo = Convert.ToString((int)Application.Enterprise.CommonObjects.Enumerations.GruposUsuariosEnum.ServicioCliente);
+                        ObjSessionUserInfo.Grupo = ObjUsuarioInfo.NombreGrupo;
+                        ObjSessionUserInfo.Email = ObjUsuarioInfo.Email.ToString().Trim();
+                        ObjSessionUserInfo.ClaveUsuario = objUser.Passwordd.Trim();
+                        ObjSessionUserInfo.MostrarTermyCond = "false";
                     }
-                    */
+                    
                     #endregion
                     #region "SERVICIO AL CLIENTE ESPECIAL (SAC)"
-                    /*else if (ObjUsuarioInfo.IdGrupo == Convert.ToString((int)NIVI.Application.Enterprise.CommonObjects.GruposUsuariosEnum.ServicioClienteEspecial))
+                    else if (ObjUsuarioInfo.IdGrupo == Convert.ToString((int)Application.Enterprise.CommonObjects.Enumerations.GruposUsuariosEnum.ServicioClienteEspecial))
                     {
+                        /*
+                                                Session["Usuario"] = ObjUsuarioInfo.Clave.ToString().Trim();
+                                                Session["NombreUsuario"] = ObjUsuario.DesencriptarCadena(ObjUsuarioInfo.Descripcion.ToString().Trim());
+                                                Session["IdGrupo"] = Convert.ToString((int)NIVI.Application.Enterprise.CommonObjects.GruposUsuariosEnum.ServicioClienteEspecial);
+                                                Session["Grupo"] = ObjUsuarioInfo.NombreGrupo;
+                                                Session["Email"] = ObjUsuarioInfo.Email.ToString().Trim();
+                                                Session["ClaveUsuario"] = txtPwd.Value.Trim();
+                                                Session["MostrarTermyCond"] = "false";
+                                                */
+                        ObjSessionUserInfo.Cedula = ObjUsuarioInfo.Usuario.ToString().Trim();
+                        //Session["Usuario"] = ObjVendedorInfo.IdVendedor.ToString().Trim();
+                        ObjSessionUserInfo.Usuario = ObjUsuarioInfo.Clave.ToString().Trim();
+                        ObjSessionUserInfo.NombreUsuario = ObjUsuarioInfo.NombreUsuario.ToString().Trim();
+                        ObjSessionUserInfo.IdGrupo = Convert.ToString((int)Application.Enterprise.CommonObjects.Enumerations.GruposUsuariosEnum.ServicioClienteEspecial);
+                        ObjSessionUserInfo.Grupo = ObjUsuarioInfo.NombreGrupo;
+                        ObjSessionUserInfo.Email = ObjUsuarioInfo.Email.ToString().Trim();
+                        ObjSessionUserInfo.ClaveUsuario = objUser.Passwordd.Trim();
+                        ObjSessionUserInfo.MostrarTermyCond = "false";
 
-                        Session["Usuario"] = ObjUsuarioInfo.Clave.ToString().Trim();
-                        Session["NombreUsuario"] = ObjUsuario.DesencriptarCadena(ObjUsuarioInfo.Descripcion.ToString().Trim());
-                        Session["IdGrupo"] = Convert.ToString((int)NIVI.Application.Enterprise.CommonObjects.GruposUsuariosEnum.ServicioClienteEspecial);
-                        Session["Grupo"] = ObjUsuarioInfo.NombreGrupo;
-                        Session["Email"] = ObjUsuarioInfo.Email.ToString().Trim();
-                        Session["ClaveUsuario"] = txtPwd.Value.Trim();
-
-                        Session["MostrarTermyCond"] = "false";
-                    }*/
+                    }
                     #endregion
                     #region "SALA DE VENTAS (VPN)"
                     /*else if (ObjUsuarioInfo.IdGrupo == Convert.ToString((int)NIVI.Application.Enterprise.CommonObjects.GruposUsuariosEnum.SalaVentas))

@@ -54,7 +54,7 @@ namespace Application.Enterprise.Data
         /// </summary>
         private void Config()
         {
-            commandCliente = db.GetStoredProcCommand("PRC_SVDN_CLIENTE");
+            commandCliente = db.GetStoredProcCommand("PRC_SVDN_CLIENTE_2020");
 
             db.AddInParameter(commandCliente, "i_operation", DbType.String);
             db.AddInParameter(commandCliente, "i_option", DbType.String);
@@ -4054,5 +4054,8 @@ namespace Application.Enterprise.Data
 
             return m;
         }
+       
+        
+
     }
 }

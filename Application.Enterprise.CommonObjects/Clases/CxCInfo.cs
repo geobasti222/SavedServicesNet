@@ -270,6 +270,7 @@ namespace Application.Enterprise.CommonObjects
             get { return lider; }
             set { lider = value; }
         }
+   
 
         private decimal saldo;
         /// <summary>
@@ -279,6 +280,33 @@ namespace Application.Enterprise.CommonObjects
         {
             get { return saldo; }
             set { saldo = value; }
+        }
+        private decimal devolucion;
+        /// <summary>
+        /// 
+        /// </summary>
+        public decimal Devolucion
+        {
+            get { return devolucion; }
+            set { devolucion = value; }
+        }
+        private decimal recaudo;
+        /// <summary>
+        /// 
+        /// </summary>
+        public decimal Recaudo
+        {
+            get { return recaudo; }
+            set { recaudo = value; }
+        }
+        private string campana;
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Campana
+        {
+            get { return campana; }
+            set { campana = value; }
         }
     }
 }

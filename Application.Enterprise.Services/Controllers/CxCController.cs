@@ -49,6 +49,37 @@ namespace Application.Enterprise.Services.Controllers
 
         }
 
+        [HttpGet]
+        [HttpPost]
+        public List<CxCInfo> ListCxCLider(CxCInfo ObjPedidosCxCInfoRequest)
+        {
+
+            List<CxCInfo> lista = new List<CxCInfo>(); ;
+            CxC module = new CxC("conexion");
+
+            //--------------------------------------------------------------------------------------------------------
+
+
+            //--------------------------------------------------------------------------------------------------------
+            lista = module.ListCxCLider(ObjPedidosCxCInfoRequest.Lider);
+
+
+            if (lista != null && lista.Count > 0)
+            {
+
+            }
+            else
+            {
+                lista = new List<CxCInfo>();
+            }
+
+
+            return lista;
+
+
+        }
+
+
 
 
     }

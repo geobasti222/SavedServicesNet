@@ -1456,6 +1456,46 @@ namespace Application.Enterprise.CommonObjects
             get { return codestado; }
             set { codestado = value; }
         }
+        
+        private string correolider;
+                /// <summary>
+        /// 
+        /// </summary>
+        public string EmailLider
+        {
+            get { return correolider; }
+            set { correolider = value; }
+        }
+
+        private string clasificacionc;
+        /// <summary>
+        /// 
+        /// </summary>
+        public string ClasificacionC
+        {
+            get { return clasificacionc; }
+            set { clasificacionc = value; }
+        }
+
+        private bool contactada;
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool Contactada
+        {
+            get { return contactada; }
+            set { contactada = value; }
+        }
+        private bool interescredito;
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool InteresCredito
+        {
+            get { return interescredito; }
+            set { interescredito = value; }
+        }
+
 
         public virtual Error Error
         {

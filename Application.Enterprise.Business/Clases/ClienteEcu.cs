@@ -53,6 +53,8 @@ namespace Application.Enterprise.Business
             return module.ListxNIT(nit);
         }
 
+
+
         /// <summary>
         /// lista un Cliente de SVDN especifico por nit.
         /// </summary>
@@ -661,6 +663,16 @@ namespace Application.Enterprise.Business
         public ClienteInfo ListEstadoxNit(string Nit)
         {
             return module.ListEstadoxNit(Nit);
+        }
+
+        /// <summary>
+        /// Lista el estado de una empresaria.
+        /// </summary>
+        /// <param name="Nit"></param>
+        /// <returns></returns>
+        public ClienteInfo ConsultaClienteNit(string Nit)
+        {
+            return module.ConsultaClienteNit(Nit);
         }
 
         #endregion

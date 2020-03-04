@@ -55,7 +55,7 @@ namespace Application.Enterprise.Data
         /// </summary>
         private void Config()
         {
-            commandPedidosCliente = db.GetStoredProcCommand("PRC_SVDN_PEDIDOSC1_2000");
+            commandPedidosCliente = db.GetStoredProcCommand("PRC_SVDN_PEDIDOSC1_2020");
 
             db.AddInParameter(commandPedidosCliente, "i_operation", DbType.String);
             db.AddInParameter(commandPedidosCliente, "i_option", DbType.String);
@@ -4684,12 +4684,13 @@ namespace Application.Enterprise.Data
         /// <param name="zona"></param>
         /// <returns></returns>
         ///  public List<PedidosClienteInfo> List()
-        public List<PedidosClienteInfo> ListxGerenteZonaFacturados(string zona, string Campana)
+        public List<PedidosClienteInfo> ListxGerenteZonaFacturados(string Zona, string Campana, string Lider)
         {
             db.SetParameterValue(commandPedidosCliente, "i_operation", 'S');
             db.SetParameterValue(commandPedidosCliente, "i_option", "AO");
-            db.SetParameterValue(commandPedidosCliente, "i_vendedor", zona);
+            db.SetParameterValue(commandPedidosCliente, "i_zona", Zona);
             db.SetParameterValue(commandPedidosCliente, "i_campana", Campana);
+            db.SetParameterValue(commandPedidosCliente, "i_idlider", Lider);
 
             List<PedidosClienteInfo> col = new List<PedidosClienteInfo>();
 
@@ -4703,7 +4704,7 @@ namespace Application.Enterprise.Data
 
                 while (dr.Read())
                 {
-                    m = Factory.GetPedidosCliente(dr);
+                    m = Factory.GetPedidosFacturados(dr);
 
                     col.Add(m);
                 }

@@ -24,6 +24,9 @@ namespace Application.Enterprise.CommonObjects.Interfaces
         /// <returns></returns>
         ClienteInfo ListxNIT(string nit);
 
+   
+
+
         /// <summary>
         /// lista un Cliente de SVDN especifico por nit.
         /// </summary>
@@ -381,6 +384,13 @@ namespace Application.Enterprise.CommonObjects.Interfaces
         /// <param name="Nit"></param>
         /// <returns></returns>
         ClienteInfo ListEstadoxNit(string Nit);
+
+        /// <summary>
+        /// Lista el estado de una empresaria.
+        /// </summary>
+        /// <param name="Nit"></param>
+        /// <returns></returns>
+        ClienteInfo ConsultaClienteNit(string Nit);
 
         #endregion
 

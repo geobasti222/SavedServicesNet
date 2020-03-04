@@ -22,6 +22,19 @@ namespace Application.Enterprise.Services.Controllers
 
         public static IAutentication Instance => _Instance.Value;
 
+        public class Response
+        {
+            public string message_id { get; set; }
+            public int message_count { get; set; }
+            public double price { get; set; }
+        }
+        public class RootObject
+        {
+            public Response Response { get; set; }
+            public string ErrorMessage { get; set; }
+            public int Status { get; set; }
+        }
+
         [HttpGet]
         [HttpPost]
         public PedidosClienteInfo GuardarEncabezadoPedido(PedidosClienteInfo ObjPedidosClienteInfoRequest)
@@ -273,6 +286,42 @@ namespace Application.Enterprise.Services.Controllers
             {
                 objPedidosClienteInfo.Numero = IdPedido;
                 objPedidosClienteInfo.okTransEncabezadoPedido = true;
+                
+                /////////////////////Envio SMS///////////////////////////////////////////////////////
+                decimal totalx;
+                totalx = objPedidosClienteInfo.IVAPrecioCat + objPedidosClienteInfo.ValorPrecioCat;
+
+                string key = "Estimada Empresaria GLOD tu Pedido Numero: "+ IdPedido + " de " + totalx.ToString("$ ###,###.##") + " fue reservado con Exito" ;
+
+                string celular = "0983281548";                                                                    
+
+                string sURL;
+
+
+                sURL = "http://192.168.1.242:80/sendsms?username=admin&password=admin&phonenumber="+celular+"&message=" + key + "&[port=xxx&][report=xxx&][timeout=xdxx]";
+
+                try
+                {
+
+                    using (WebClient client = new WebClient())
+                    {
+
+                        string s = client.DownloadString(sURL);
+
+                        var responseObject = Newtonsoft.Json.JsonConvert.DeserializeObject<RootObject>(s);
+                        int n = responseObject.Status;
+
+
+                    }
+
+
+                }
+                catch (Exception ex)
+                {
+
+                    ex.ToString();
+                }
+                /////////////////////Envio SMS///////////////////////////////////////////////////////
             }
 
             else
@@ -1345,7 +1394,7 @@ namespace Application.Enterprise.Services.Controllers
                 objCampanaInfo = objCampana.ListxGetDate();
             }
             //--------------------------------------------------------------------------------------------------------
-            lista = module.ListxGerenteZonaFacturados(ObjPedidosClienteInfoRequest.IdVendedor, objCampanaInfo.Campana);
+            lista = module.ListxGerenteZonaFacturados(ObjPedidosClienteInfoRequest.Zona, objCampanaInfo.Campana, ObjPedidosClienteInfoRequest.IdLider);
             /*if (Session["IdGrupo"].ToString() == Convert.ToString((int)GruposUsuariosEnum.GerentesZona))
             {
                 lista = module.ListxGerenteZona(Session["IdVendedor"].ToString(), objCampanaInfo.Campana);

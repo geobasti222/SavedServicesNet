@@ -152,6 +152,7 @@
     <Compile Include="Clases\ConfigurationParameters.cs" />
     <Compile Include="Clases\ContactenosInfo.cs" />
     <Compile Include="Clases\CostoMercanciaInfo.cs" />
+    <Compile Include="Clases\NotificaInfo.cs" />
     <Compile Include="Clases\CxCInfo.cs" />
     <Compile Include="Clases\CxVNitsInfo.cs" />
     <Compile Include="Clases\DescuentoInfo.cs" />
@@ -343,6 +344,7 @@
     <Compile Include="Interfaces\IComoTeEnteraste.cs" />
     <Compile Include="Interfaces\IContactenos.cs" />
     <Compile Include="Interfaces\ICostoMercancia.cs" />
+    <Compile Include="Interfaces\INotifica.cs" />
     <Compile Include="Interfaces\ICxC.cs" />
     <Compile Include="Interfaces\IDescuento.cs" />
     <Compile Include="Interfaces\IDescuentoGlod.cs" />

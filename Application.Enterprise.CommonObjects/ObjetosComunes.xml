@@ -2218,6 +2218,26 @@
             
             </summary>
         </member>
+        <member name="P:Application.Enterprise.CommonObjects.ClienteInfo.EmailLider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.ClienteInfo.ClasificacionC">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.ClienteInfo.Contactada">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.ClienteInfo.InteresCredito">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="P:Application.Enterprise.CommonObjects.ClientePuntosEnvioSiesaInfo.F_NUMERO_REG">
             <summary>
             1 | Numero de registro | Numero consecutivo |  Obligatorio: Si | Inicio:1 | Tamaño:7 | Tipo:Numérico
@@ -2966,6 +2986,166 @@
             
             </summary>
         </member>
+        <member name="T:Application.Enterprise.CommonObjects.NotificaInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.Mt_Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.Nit">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.Estado">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.Email">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.Telefono">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.Valor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.Saldo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.Fecha">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.Vencimiento">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.RazonSocial">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.Nombre1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.NombreLider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.EmaiLider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.TelefonoLider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.Documento">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.FechaEnvio">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.EmailParaGlod">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.EmailDesde">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.EmailAsunto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.EmailCuerpo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.EmailPassword">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.EmailUsuario">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.EmailPuerto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.EmailSsl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.EmailHost">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.Direccion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.Ciudad">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.Puntos">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.Guia">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.TipoEnvio">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.NotificaInfo.Factura">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:Application.Enterprise.CommonObjects.CxCInfo">
             <summary>
             
@@ -3102,6 +3282,21 @@
             </summary>
         </member>
         <member name="P:Application.Enterprise.CommonObjects.CxCInfo.Saldo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.CxCInfo.Devolucion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.CxCInfo.Recaudo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Enterprise.CommonObjects.CxCInfo.Campana">
             <summary>
             
             </summary>
@@ -7017,7 +7212,7 @@
             
             </summary>
         </member>
-        <member name="P:Application.Enterprise.CommonObjects.PedidosClienteInfo.Numerodespacho">
+        <member name="P:Application.Enterprise.CommonObjects.PedidosClienteInfo.NumeroDespacho">
             <summary>
             
             </summary>
@@ -14666,6 +14861,13 @@
             <param name="Nit"></param>
             <returns></returns>
         </member>
+        <member name="M:Application.Enterprise.CommonObjects.Interfaces.IClienteEcu.ConsultaClienteNit(System.String)">
+            <summary>
+            Lista el estado de una empresaria.
+            </summary>
+            <param name="Nit"></param>
+            <returns></returns>
+        </member>
         <member name="M:Application.Enterprise.CommonObjects.Interfaces.IClienteEcu.SearchMapping(System.String)">
             <summary>
             Obtiene la tabla de mapeo para el buscador.
@@ -14921,6 +15123,23 @@
             Lista todos los costos de mercancia.
             </summary>
             <returns></returns>
+        </member>
+        <member name="T:Application.Enterprise.CommonObjects.Interfaces.INotifica">
+            <summary>
+            Interface de CxC
+            </summary>
+        </member>
+        <member name="M:Application.Enterprise.CommonObjects.Interfaces.INotifica.List">
+            <summary>
+            Lista todas las cuentas por cobrar (CxC).
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Enterprise.CommonObjects.Interfaces.INotifica.UpdateNotifica(System.String,System.Int32,System.String)">
+            <summary>
+            Realiza la actualizacion de un usuario en el sistema.
+            </summary>
+            <param name="item"></param>
         </member>
         <member name="T:Application.Enterprise.CommonObjects.Interfaces.ICxC">
             <summary>
@@ -17017,7 +17236,7 @@
             <param name="Campana"></param>
             <returns></returns>
         </member>
-        <member name="M:Application.Enterprise.CommonObjects.Interfaces.IPedidosCliente.ListxGerenteZonaFacturados(System.String,System.String)">
+        <member name="M:Application.Enterprise.CommonObjects.Interfaces.IPedidosCliente.ListxGerenteZonaFacturados(System.String,System.String,System.String)">
             <summary>
             lista todos los Pedidos de una gerente de zona por una campaña facturados.
             </summary>

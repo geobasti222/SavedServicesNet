@@ -1142,7 +1142,8 @@ namespace Application.Enterprise.CommonObjects
             set { grupouser = value; }
         }
 
-
+      
+    
         #region campor motivos de anulacion
 
         //INICIO GAVL  
@@ -1270,7 +1271,7 @@ namespace Application.Enterprise.CommonObjects
         /// <summary>
         /// 
         /// </summary>
-        public string Numerodespacho
+        public string NumeroDespacho
         {
             get { return numerodespacho; }
             set { numerodespacho = value; }
@@ -1285,6 +1286,7 @@ namespace Application.Enterprise.CommonObjects
             get { return pagarfletepuntos; }
             set { pagarfletepuntos = value; }
         }
+      
 
         public virtual Error Error
         {

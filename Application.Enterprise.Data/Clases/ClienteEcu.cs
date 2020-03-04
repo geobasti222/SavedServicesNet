@@ -54,7 +54,7 @@ namespace Application.Enterprise.Data
         /// </summary>
         private void Config()
         {
-            commandClienteEcu = db.GetStoredProcCommand("PRC_SVDN_CLIENTE");
+            commandClienteEcu = db.GetStoredProcCommand("PRC_SVDN_CLIENTE_2020");
 
             db.AddInParameter(commandClienteEcu, "i_operation", DbType.String);
             db.AddInParameter(commandClienteEcu, "i_option", DbType.String);
@@ -2973,6 +2973,54 @@ namespace Application.Enterprise.Data
                 while (dr.Read())
                 {
                     m = Factory.GetClientexEstadosCliente(dr);
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+
+                bool rethrow = ExceptionPolicy.HandleException(ex, "DataAccess Policy");
+
+                if (rethrow)
+                {
+                    throw;
+                }
+            }
+            finally
+            {
+                if (dr != null)
+                {
+                    dr.Close();
+                }
+            }
+
+            return m;
+        }
+
+
+
+        /// <summary>
+        /// Lista el estado de una empresaria.
+        /// </summary>
+        /// <param name="Nit"></param>
+        /// <returns></returns>
+        public ClienteInfo ConsultaClienteNit(string Nit)
+        {
+            db.SetParameterValue(commandClienteEcu, "i_operation", 'S');
+            db.SetParameterValue(commandClienteEcu, "i_option", "GB");
+            db.SetParameterValue(commandClienteEcu, "i_nit", Nit);
+
+            IDataReader dr = null;
+
+            ClienteInfo m = null;
+
+            try
+            {
+                dr = db.ExecuteReader(commandClienteEcu);
+
+                while (dr.Read())
+                {
+                    m = Factory.GetClienteActualizacion(dr);
                 }
             }
             catch (Exception ex)

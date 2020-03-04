@@ -42,6 +42,23 @@ namespace Application.Enterprise.Services.Controllers
             return ObjClienteInfoResponse;
         }
 
+
+        [HttpGet]
+        [HttpPost]
+        public ClienteInfo ConsultaClientexNit(ClienteInfo ObjClienteInfo)
+        {
+            ClienteInfo ObjClienteInfoResponse = new ClienteInfo();
+
+            ClienteEcu objCliente = new ClienteEcu("conexion");
+            ClienteInfo objClienteInfo = new ClienteInfo();
+
+            ObjClienteInfoResponse = objCliente.ConsultaClienteNit(ObjClienteInfo.Nit);
+
+
+
+            return ObjClienteInfoResponse;
+        }
+
         [HttpGet]
         [HttpPost]
         public ClienteInfo ListEstadoxNit(ClienteInfo ObjClienteInfo)
@@ -141,6 +158,9 @@ namespace Application.Enterprise.Services.Controllers
 
             return ObjClienteInfoResponse;
         }
+
+
+      
 
         [HttpGet]
         [HttpPost]
@@ -617,7 +637,8 @@ namespace Application.Enterprise.Services.Controllers
             return ObjClienteInfoResponse;
         }
 
-
+     
+    
         #region "Puntos"
 
         public int ConsultarPuntosEfectivosEmpresaria(string NumeroDocumento)

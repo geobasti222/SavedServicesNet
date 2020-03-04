@@ -55,7 +55,7 @@ namespace Application.Enterprise.Data
         /// </summary>
         private void Config()
         {
-            commandPedidosDetalleCliente = db.GetStoredProcCommand("PRC_SVDN_PEDIDOSC2_2000");
+            commandPedidosDetalleCliente = db.GetStoredProcCommand("PRC_SVDN_PEDIDOSC2_2020");
 
             db.AddInParameter(commandPedidosDetalleCliente, "i_operation", DbType.String);
             db.AddInParameter(commandPedidosDetalleCliente, "i_option", DbType.String);
