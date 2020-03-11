@@ -354,7 +354,7 @@ namespace Application.Enterprise.CommonObjects.Interfaces
         /// </summary>
         /// <param name="Vendedor"></param>
         /// <returns></returns>
-        List<PedidosClienteInfo> ListxGerenteZonaFacturados(string Zona, string Campana, string Lider);
+        List<PedidosClienteInfo> ListxGerenteZonaFacturados(string Zona, string Campana, string Lider, string Nit);
 
         /// <summary>
         /// lista todos los Pedidos de una gerente de zona por una campaña facturados ecuador.

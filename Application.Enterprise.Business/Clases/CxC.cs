@@ -69,9 +69,9 @@ namespace Application.Enterprise.Business
         /// </summary>
         /// <param name="Vendedor"></param>
         /// <returns></returns>
-        public List<CxCInfo> ListCxCLider(string Lider)
+        public List<CxCInfo> ListCxCLider(string Lider, string Nit)
         {
-            return module.ListCxCLider(Lider);
+            return module.ListCxCLider(Lider, Nit);
         }
         #endregion
     }

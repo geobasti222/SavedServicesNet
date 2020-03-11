@@ -1394,7 +1394,7 @@ namespace Application.Enterprise.Services.Controllers
                 objCampanaInfo = objCampana.ListxGetDate();
             }
             //--------------------------------------------------------------------------------------------------------
-            lista = module.ListxGerenteZonaFacturados(ObjPedidosClienteInfoRequest.Zona, objCampanaInfo.Campana, ObjPedidosClienteInfoRequest.IdLider);
+            lista = module.ListxGerenteZonaFacturados(ObjPedidosClienteInfoRequest.Zona, objCampanaInfo.Campana, ObjPedidosClienteInfoRequest.IdLider, ObjPedidosClienteInfoRequest.Nit);
             /*if (Session["IdGrupo"].ToString() == Convert.ToString((int)GruposUsuariosEnum.GerentesZona))
             {
                 lista = module.ListxGerenteZona(Session["IdVendedor"].ToString(), objCampanaInfo.Campana);

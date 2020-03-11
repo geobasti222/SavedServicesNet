@@ -748,6 +748,108 @@ namespace Application.Enterprise.Data
             return transOk;
         }
 
+
+
+        /// <summary>
+        /// Realiza la actualizacion de un usuario en el sistema.
+        /// </summary>
+        /// <param name="item"></param>
+        public bool UpdateEmpresariaLider(ClienteInfo item)
+        {
+            bool transOk = false;
+
+            IDataReader dr = null;
+            try
+            {
+                db.SetParameterValue(commandClienteEcu, "i_operation", 'U');
+                db.SetParameterValue(commandClienteEcu, "i_option", "GB");
+
+                db.SetParameterValue(commandClienteEcu, "i_nit", item.Nit);
+                db.SetParameterValue(commandClienteEcu, "i_nombre1", item.Nombre1);
+                db.SetParameterValue(commandClienteEcu, "i_nombre2", item.Nombre2);
+                db.SetParameterValue(commandClienteEcu, "i_apellido1", item.Apellido1);
+                db.SetParameterValue(commandClienteEcu, "i_apellido2", item.Apellido2);
+                db.SetParameterValue(commandClienteEcu, "i_fechanacimiento", item.FechaNacimiento);
+                db.SetParameterValue(commandClienteEcu, "i_direccionresidencia", item.DireccionResidencia);
+                db.SetParameterValue(commandClienteEcu, "i_barrio", item.Barrio);
+                db.SetParameterValue(commandClienteEcu, "i_codciudad", item.CodCiudad);
+                db.SetParameterValue(commandClienteEcu, "i_sexo", item.Sexo);
+                db.SetParameterValue(commandClienteEcu, "i_direccion", item.DireccionPedidos);
+                db.SetParameterValue(commandClienteEcu, "i_telefonos", item.Telefono1);
+                db.SetParameterValue(commandClienteEcu, "i_telefonodos", item.Telefono2);
+                db.SetParameterValue(commandClienteEcu, "i_celular1", item.Celular1);
+                db.SetParameterValue(commandClienteEcu, "i_email", item.Email);
+                db.SetParameterValue(commandClienteEcu, "i_razonsocial", item.RazonSocial);
+                db.SetParameterValue(commandClienteEcu, "i_ciudad", item.Ciudad);
+                db.SetParameterValue(commandClienteEcu, "i_pais", item.CodPais);
+                db.SetParameterValue(commandClienteEcu, "i_bar_codbarrio", item.CodigoBarrio);
+
+
+                db.SetParameterValue(commandClienteEcu, "i_codparroquia", item.CodigoParroquia);
+                db.SetParameterValue(commandClienteEcu, "i_nomparroquia", item.NombreParroquia);
+
+                db.SetParameterValue(commandClienteEcu, "i_operadorcelular", item.OperadorCelular);
+                //db.SetParameterValue(commandClienteEcu, "i_id_lider", item.Lider);
+
+                //Actualizacion 31/10/2013
+
+
+
+                db.SetParameterValue(commandClienteEcu, "i_whatsapp", item.Whatsapp);
+
+                db.SetParameterValue(commandClienteEcu, "i_tallaprendasuperior", item.TallaPrendaSuperior);
+                db.SetParameterValue(commandClienteEcu, "i_tallaprendainferior", item.TallaPrendaInferior);
+                db.SetParameterValue(commandClienteEcu, "i_tallacalzado", item.TallaCalzado);
+
+
+                dr = db.ExecuteReader(commandClienteEcu);
+
+                transOk = true;
+
+                //-----------------------------------------------------------------------------------------------------------------------------
+                //Guardar auditoria 
+                try
+                {
+                    Auditoria objAuditoria = new Auditoria("conexion");
+                    AuditoriaInfo objAuditoriaInfo = new AuditoriaInfo();
+
+                    objAuditoriaInfo.FechaSistema = DateTime.Now;
+                    objAuditoriaInfo.Usuario = item.Usuario;
+                    objAuditoriaInfo.Proceso = "Se realizó actualización de información general de empresaria: C.C. " + item.Nit + " " + (item.Nombre1 + " " + item.Nombre2 + " " + item.Apellido1 + " " + item.Apellido2) + ". Acción Realizada por el Usuario: " + item.Usuario;
+
+                    objAuditoria.Insert(objAuditoriaInfo);
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error Auditoria: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+
+                }
+                //-----------------------------------------------------------------------------------------------------------------------------
+
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+
+                bool rethrow = ExceptionPolicy.HandleException(ex, "DataAccess Policy");
+
+                if (rethrow)
+                {
+                    throw;
+                }
+            }
+            finally
+            {
+                if (dr != null)
+                {
+                    dr.Close();
+                }
+            }
+
+            return transOk;
+        }
+
+
         /// <summary>
         /// Guarda los datos de un cliente en la tabla de Nivi en produccion para el paso de pedidos.
         /// </summary>

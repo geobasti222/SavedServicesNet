@@ -61,7 +61,7 @@ namespace Application.Enterprise.Services.Controllers
 
 
             //--------------------------------------------------------------------------------------------------------
-            lista = module.ListCxCLider(ObjPedidosCxCInfoRequest.Lider);
+            lista = module.ListCxCLider(ObjPedidosCxCInfoRequest.Lider, ObjPedidosCxCInfoRequest.Nit);
 
 
             if (lista != null && lista.Count > 0)

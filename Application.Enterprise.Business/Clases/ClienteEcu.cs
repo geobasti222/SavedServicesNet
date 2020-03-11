@@ -257,6 +257,23 @@ namespace Application.Enterprise.Business
         }
 
         /// <summary>
+        /// Realiza la actualizacion de un usuario en el sistema.
+        /// </summary>
+        /// <param name="item"></param>
+        public bool UpdateEmpresariaLider(ClienteInfo item)
+        {
+            try
+            {
+                return module.UpdateEmpresariaLider(item);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+
+                return false;
+            }
+        }
+        /// <summary>
         /// Realiza la actualizacion del estado de un cliente.
         /// </summary>
         /// <param name="Nit"></param>

@@ -247,11 +247,12 @@ namespace Application.Enterprise.Data
         /// </summary>
         /// <param name="Vendedor"></param>
         /// <returns></returns>
-        public List<CxCInfo> ListCxCLider(string Lider)
+        public List<CxCInfo> ListCxCLider(string Lider, string Nit)
         {
             db.SetParameterValue(commandCxC, "i_operation", 'S');
             db.SetParameterValue(commandCxC, "i_option", 'D');
             db.SetParameterValue(commandCxC, "i_lider", Lider);
+            db.SetParameterValue(commandCxC, "i_nit", Nit);
 
 
             List<CxCInfo> col = new List<CxCInfo>();

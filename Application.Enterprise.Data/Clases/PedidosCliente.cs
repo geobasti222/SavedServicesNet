@@ -4684,13 +4684,14 @@ namespace Application.Enterprise.Data
         /// <param name="zona"></param>
         /// <returns></returns>
         ///  public List<PedidosClienteInfo> List()
-        public List<PedidosClienteInfo> ListxGerenteZonaFacturados(string Zona, string Campana, string Lider)
+        public List<PedidosClienteInfo> ListxGerenteZonaFacturados(string Zona, string Campana, string Lider, string Nit)
         {
             db.SetParameterValue(commandPedidosCliente, "i_operation", 'S');
             db.SetParameterValue(commandPedidosCliente, "i_option", "AO");
             db.SetParameterValue(commandPedidosCliente, "i_zona", Zona);
             db.SetParameterValue(commandPedidosCliente, "i_campana", Campana);
             db.SetParameterValue(commandPedidosCliente, "i_idlider", Lider);
+            db.SetParameterValue(commandPedidosCliente, "i_nit", Nit);
 
             List<PedidosClienteInfo> col = new List<PedidosClienteInfo>();
 

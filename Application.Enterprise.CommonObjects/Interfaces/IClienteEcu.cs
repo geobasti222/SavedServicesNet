@@ -146,6 +146,13 @@ namespace Application.Enterprise.CommonObjects.Interfaces
         bool UpdateCliente(ClienteInfo item);
 
         /// <summary>
+        /// Realiza la actualizacion de un usuario en el sistema.
+        /// </summary>
+        /// <param name="item"></param>
+        bool UpdateEmpresariaLider(ClienteInfo item);
+
+
+        /// <summary>
         /// Realiza la actualizacion del estado de migracion del cliente a produccion en la BD de Nivi y MKT.
         /// </summary>
         /// <param name="Nit"></param>

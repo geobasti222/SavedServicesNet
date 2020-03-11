@@ -365,9 +365,9 @@ namespace Application.Enterprise.Business
         /// </summary>
         /// <param name="Vendedor"></param>
         /// <returns></returns>
-        public List<PedidosClienteInfo> ListxGerenteZonaFacturados(string Zona, string Campana, string Lider)
+        public List<PedidosClienteInfo> ListxGerenteZonaFacturados(string Zona, string Campana, string Lider, string Nit)
         {
-            return module.ListxGerenteZonaFacturados(Zona, Campana, Lider);
+            return module.ListxGerenteZonaFacturados(Zona, Campana, Lider, Nit);
         }
 
         /// <summary>

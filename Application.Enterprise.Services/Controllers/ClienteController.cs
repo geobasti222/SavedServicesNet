@@ -637,8 +637,47 @@ namespace Application.Enterprise.Services.Controllers
             return ObjClienteInfoResponse;
         }
 
-     
-    
+
+        [HttpGet]
+        [HttpPost]
+        public ClienteInfo ActualizarEmpresaria(ClienteInfo objClienteInfo)
+        {
+            ClienteInfo ObjClienteInfoResponse = new ClienteInfo();
+
+            if (objClienteInfo.Nit != "" && objClienteInfo.Nit != null && objClienteInfo.Nit != "undefined")
+            {
+                ClienteEcu ObjCliente = new ClienteEcu("conexion");
+
+                bool OkTrans = false;
+
+                OkTrans = ObjCliente.UpdateEmpresariaLider(objClienteInfo);
+
+                if (OkTrans)
+                {
+                    ObjClienteInfoResponse = objClienteInfo;
+                }
+                else
+                {
+                    ObjClienteInfoResponse.Error = new Error();
+                    ObjClienteInfoResponse.Error.Id = -1;
+                    ObjClienteInfoResponse.Error.Descripcion = "No se puede crear actualizar la informacion, verifique el Documento de la empresaria.:" + objClienteInfo.Nit + ", Fallo Envio.";
+                    ObjClienteInfoResponse.Nit = objClienteInfo.Nit;
+                }
+
+            }
+            else
+            {
+                ObjClienteInfoResponse.Error = new Error();
+                ObjClienteInfoResponse.Error.Id = -1;
+                ObjClienteInfoResponse.Error.Descripcion = "No se puede crear actualizar la informacion, verifique el Documento de la empresaria.:" + objClienteInfo.Nit + ", Fallo Envio.";
+                ObjClienteInfoResponse.Nit = objClienteInfo.Nit;
+            }
+
+            return ObjClienteInfoResponse;
+        }
+
+
+
         #region "Puntos"
 
         public int ConsultarPuntosEfectivosEmpresaria(string NumeroDocumento)
