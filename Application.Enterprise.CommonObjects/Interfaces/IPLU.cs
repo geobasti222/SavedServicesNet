@@ -40,6 +40,14 @@ namespace Application.Enterprise.CommonObjects.Interfaces
         /// <returns></returns>
         PLUInfo ListxArticulosxPLUxTipoPrecio(int PLU, string TipoPrecio);
 
+        /// <summary>
+        /// Lista todos los PLU de una referencia existentes
+        /// </summary>
+        /// <param name="Referencia"></param>
+        /// <returns></returns>
+        List<PLUInfo> ListCatalogoActual(string Campana);
+
+
         #endregion
     }
 }

@@ -252,7 +252,7 @@ namespace Application.Enterprise.Data
 
                 while (dr.Read())
                 {
-                    m = Factory.GetPedidosCliente(dr);
+                    m = Factory.GetPedidosReservados(dr);
 
                     col.Add(m);
                 }
@@ -5561,7 +5561,7 @@ namespace Application.Enterprise.Data
 
                 while (dr.Read())
                 {
-                    m = Factory.GetPedidosProcesados(dr);
+                    m = Factory.GetPedidosAnulados(dr);
 
                     col.Add(m);
                 }
@@ -5854,7 +5854,7 @@ namespace Application.Enterprise.Data
         public List<PedidosClienteInfo> ListPedidosAnuladosxNit(string Campana, string Nit)
         {
             db.SetParameterValue(commandPedidosCliente, "i_operation", 'S');
-            db.SetParameterValue(commandPedidosCliente, "i_option", "BM");
+            db.SetParameterValue(commandPedidosCliente, "i_option", "BU");
             db.SetParameterValue(commandPedidosCliente, "i_campana", Campana);
             db.SetParameterValue(commandPedidosCliente, "i_nit", Nit);
 
@@ -5870,7 +5870,7 @@ namespace Application.Enterprise.Data
 
                 while (dr.Read())
                 {
-                    m = Factory.GetPedidosProcesados(dr);
+                    m = Factory.GetPedidosAnulados(dr);
 
                     col.Add(m);
                 }
@@ -5922,7 +5922,7 @@ namespace Application.Enterprise.Data
 
                 while (dr.Read())
                 {
-                    m = Factory.GetPedidosCliente(dr);
+                    m = Factory.GetPedidosReservados(dr);
 
                     col.Add(m);
                 }
@@ -6011,7 +6011,7 @@ namespace Application.Enterprise.Data
             db.SetParameterValue(commandPedidosCliente, "i_operation", 'S');
             db.SetParameterValue(commandPedidosCliente, "i_option", "BP");
             db.SetParameterValue(commandPedidosCliente, "i_campana", Campana);
-            db.SetParameterValue(commandPedidosCliente, "i_idlider", IdLider);
+                db.SetParameterValue(commandPedidosCliente, "i_idlider", IdLider);
 
 
             List<PedidosClienteInfo> col = new List<PedidosClienteInfo>();
@@ -6026,7 +6026,7 @@ namespace Application.Enterprise.Data
 
                 while (dr.Read())
                 {
-                    m = Factory.GetPedidosProcesados(dr);
+                    m = Factory.GetPedidosAnulados(dr);
 
                     col.Add(m);
                 }

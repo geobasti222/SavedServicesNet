@@ -241,5 +241,37 @@ namespace Application.Enterprise.Services.Controllers
             return porcentaje;
         }
 
+
+        [HttpGet]
+        [HttpPost]
+        public List<PLUInfo> ListCatalogoActual(PLUInfo ObjPluInfoRequest)
+        {
+
+            List<PLUInfo> lista = new List<PLUInfo>(); ;
+            PLU module = new PLU("conexion");
+
+            //--------------------------------------------------------------------------------------------------------
+
+
+            //--------------------------------------------------------------------------------------------------------
+            lista = module.ListCatalogoActual(ObjPluInfoRequest.Campana);
+
+
+            if (lista != null && lista.Count > 0)
+            {
+
+            }
+            else
+            {
+                lista = new List<PLUInfo>();
+            }
+
+
+            return lista;
+
+
+        }
+
+
     }
 }

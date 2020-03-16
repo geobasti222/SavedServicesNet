@@ -54,12 +54,13 @@ namespace Application.Enterprise.Data
         /// </summary>
         private void Config()
         {
-            commandPLU = db.GetStoredProcCommand("PRC_SVDN_PLU");
+            commandPLU = db.GetStoredProcCommand("PRC_SVDN_PLU_2020");
 
             db.AddInParameter(commandPLU, "i_operation", DbType.String);
             db.AddInParameter(commandPLU, "i_option", DbType.String);
             db.AddInParameter(commandPLU, "i_plu", DbType.Int32);
             db.AddInParameter(commandPLU, "i_referencia", DbType.String);
+            db.AddInParameter(commandPLU, "i_campana", DbType.String);
             db.AddInParameter(commandPLU, "i_codigocolor", DbType.String);
             db.AddInParameter(commandPLU, "i_codigotalla", DbType.String);
             db.AddInParameter(commandPLU, "i_codigototal", DbType.String);
@@ -319,6 +320,55 @@ namespace Application.Enterprise.Data
             return m;
         }
 
+          /// <summary>
+        /// Lista todos los PLU existentes.
+        /// </summary>
+        /// <returns></returns>
+        public List<PLUInfo> ListCatalogoActual(string Campana)
+        {
+            db.SetParameterValue(commandPLU, "i_operation", 'S');
+            db.SetParameterValue(commandPLU, "i_option", 'E');
+            db.SetParameterValue(commandPLU, "i_campana", Campana);
+
+            List<PLUInfo> col = new List<PLUInfo>();
+
+            IDataReader dr = null;
+
+            PLUInfo m = null;
+
+            try
+            {
+                dr = db.ExecuteReader(commandPLU);
+
+                while (dr.Read())
+                {
+                    m = Factory.GetCatalogovigente (dr);
+
+                    col.Add(m);
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+
+                bool rethrow = ExceptionPolicy.HandleException(ex, "DataAccess Policy");
+
+                if (rethrow)
+                {
+                    throw;
+                }
+            }
+            finally
+            {
+                if (dr != null)
+                {
+                    dr.Close();
+                }
+            }
+
+            return col;
+        }
+        
         #endregion
     }
 }

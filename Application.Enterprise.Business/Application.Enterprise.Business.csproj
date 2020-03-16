@@ -162,6 +162,7 @@
     <Compile Include="Clases\ConfiguracionInstrumentos.cs" />
     <Compile Include="Clases\Contactenos.cs" />
     <Compile Include="Clases\CostoMercancia.cs" />
+    <Compile Include="Clases\EPuntos.cs" />
     <Compile Include="Clases\Notifica.cs" />
     <Compile Include="Clases\CxC.cs" />
     <Compile Include="Clases\Descuento.cs" />

@@ -12285,6 +12285,619 @@ namespace Application.Enterprise.Data
             return m;
         }
 
+
+        /// <summary>
+        /// Crea un objeto de Pedidos Cliente
+        /// </summary>
+        /// <param name="dr"></param>
+        internal static PedidosClienteInfo GetPedidosReservados(IDataReader dr)
+        {
+            PedidosClienteInfo m = new PedidosClienteInfo();
+
+            try
+            {
+                m.Numero = Tools.ToString(dr, "numero");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Mes = Tools.ToString(dr, "mes");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Fecha = Tools.ToDateTime(dr, "fecha");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Anulado = Tools.ToInt32(dr, "anulado");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Espera = Tools.ToInt32(dr, "espera");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Despacho = Tools.ToDateTime(dr, "despacho");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Nit = Tools.ToString(dr, "nit");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Vendedor = Tools.ToString(dr, "vendedor");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.IVA = Tools.ToDecimal(dr, "iva");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Valor = Tools.ToDecimal(dr, "valor");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Descuento = Tools.ToDecimal(dr, "descuento");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.FechaCreacion = Tools.ToDateTime(dr, "fechacreacion");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.ClaveUsuario = Tools.ToString(dr, "claveusuario");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Zona = Tools.ToString(dr, "zona");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+            try
+            {
+                m.CodigoNumeracion = Tools.ToString(dr, "codigo_numeracion");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+            try
+            {
+                m.Transmitido = Tools.ToInt32(dr, "transmitido");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Campana = Tools.ToString(dr, "campana");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.NumeroEnvio = Tools.ToString(dr, "numeroenvio");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.NoFacturado = Tools.ToDecimal(dr, "nofacturado");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Facturar = Tools.ToInt32(dr, "facturar");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.CodTipo = Tools.ToString(dr, "codtipo");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Devol = Tools.ToString(dr, "devol");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Factura = Tools.ToString(dr, "factura");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.NombreVendedor = Tools.ToString(dr, "nombre");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.NombreEmpresaria = Tools.ToString(dr, "razon_social");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.NombreZona = Tools.ToString(dr, "descripcion");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.IVA = Tools.ToDecimal(dr, "iva");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Orden = Tools.ToInt32(dr, "orden");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Procesado = Tools.ToBoolean(dr, "procesado");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.IVAPrecioCat = Tools.ToDecimal(dr, "ivapreciocatalogo");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.ValorPrecioCat = Tools.ToDecimal(dr, "valorpreciocatalogo");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Codigo = Tools.ToString(dr, "codigo");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.GrupoCatalogo = Tools.ToString(dr, "grupocatalogo");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.GeneraPremios = Tools.ToBoolean(dr, "generapremios");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Anexo = Tools.ToInt32(dr, "anexo");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+      
+
+            try
+            {
+                m.Reserva = Tools.ToBoolean(dr, "reserva");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+     
+   
+
+
+    
+
+
+            return m;
+        }
+
+
+        /// <summary>
+        /// Crea un objeto de Pedidos Cliente
+        /// </summary>
+        /// <param name="dr"></param>
+        internal static PedidosClienteInfo GetPedidosAnulados(IDataReader dr)
+
+        {
+            PedidosClienteInfo m = new PedidosClienteInfo();
+
+            try
+            {
+                m.Numero = Tools.ToString(dr, "numero");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Mes = Tools.ToString(dr, "mes");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Fecha = Tools.ToDateTime(dr, "fecha");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Anulado = Tools.ToInt32(dr, "anulado");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Espera = Tools.ToInt32(dr, "espera");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Despacho = Tools.ToDateTime(dr, "despacho");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Nit = Tools.ToString(dr, "nit");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Vendedor = Tools.ToString(dr, "vendedor");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.IVA = Tools.ToDecimal(dr, "iva");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Valor = Tools.ToDecimal(dr, "valor");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Descuento = Tools.ToDecimal(dr, "descuento");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.FechaCreacion = Tools.ToDateTime(dr, "fechacreacion");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.ClaveUsuario = Tools.ToString(dr, "claveusuario");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Zona = Tools.ToString(dr, "zona");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+            try
+            {
+                m.CodigoNumeracion = Tools.ToString(dr, "codigo_numeracion");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+            try
+            {
+                m.Transmitido = Tools.ToInt32(dr, "transmitido");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Campana = Tools.ToString(dr, "campana");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.NumeroEnvio = Tools.ToString(dr, "numeroenvio");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.NoFacturado = Tools.ToDecimal(dr, "nofacturado");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Facturar = Tools.ToInt32(dr, "facturar");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.CodTipo = Tools.ToString(dr, "codtipo");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Devol = Tools.ToString(dr, "devol");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Factura = Tools.ToString(dr, "factura");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+  
+
+            try
+            {
+                m.NombreEmpresaria = Tools.ToString(dr, "razon_social");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.NombreZona = Tools.ToString(dr, "descripcion");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.IVA = Tools.ToDecimal(dr, "iva");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Orden = Tools.ToInt32(dr, "orden");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.Procesado = Tools.ToBoolean(dr, "procesado");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+    
+           
+
+        
+
+            return m;
+        }
+
         /// <summary>
         /// Crea un objeto de Pedidos Cliente
         /// </summary>
@@ -19494,7 +20107,7 @@ namespace Application.Enterprise.Data
 
             try
             {
-                m.ValorUnitario = Tools.ToDecimal(dr, "PrecioConIVA");
+                m.ValorUnitario =  Tools.ToDecimal(dr, "PrecioConIVA");
             }
             catch (Exception ex)
             {
@@ -21038,6 +21651,102 @@ namespace Application.Enterprise.Data
                 System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
             }
 
+            return m;
+        }
+
+        /// <summary>
+        /// Crea un objeto de PLU
+        /// </summary>
+        /// <param name="dr"></param>
+        internal static PLUInfo GetCatalogovigente(IDataReader dr)
+
+
+        {
+            PLUInfo m = new PLUInfo();
+
+            try
+            {
+                m.PLU = Tools.ToInt32(dr, "plu");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.NombreProducto = Tools.ToString(dr, "nombreproducto");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+            try
+            {
+                m.PrecioCatalogoSinIVA = Tools.ToDecimal(dr, "PrecioSinIVA");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+            try
+            {
+                m.IVA = Tools.ToDecimal(dr, "IVA");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.PrecioCatalogoTotalConIVA = Tools.ToDecimal(dr, "PrecioConIVA");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.PorcentajeIVA = Tools.ToDecimal(dr, "PorcentajeIVA");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+            try
+            {
+                m.PrecioPuntos = Tools.ToInt32(dr, "precioPuntos");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+            try
+            {
+                m.Imagen = Tools.ToString(dr, "IMAGEN");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+            try
+            {
+                m.NombreColor = Tools.ToString(dr, "nombrecolor");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+            try
+            {
+                m.NombreTalla = Tools.ToString(dr, "nombretalla");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
             return m;
         }
 
@@ -36265,6 +36974,110 @@ namespace Application.Enterprise.Data
 
             return m;
         }
+
+        /// <summary>
+        /// Crea un objeto de CxVNits
+        /// </summary>
+        /// <param name="dr"></param>
+        internal static EPuntosInfo GetPuntosEmpresaria(IDataReader dr)
+
+        {
+            EPuntosInfo m = new EPuntosInfo();
+
+            try
+            {
+                m.Nit = Tools.ToString(dr, "nit");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.NombreEmpresaria = Tools.ToString(dr, "razon_social");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+            try
+            {
+                m.Zona = Tools.ToString(dr, "zona");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+            try
+            {
+                m.Lider = Tools.ToString(dr, "lider");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+            try
+            {
+                m.NombreLider = Tools.ToString(dr, "nombrelider");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+            try
+            {
+                m.Vendedor = Tools.ToString(dr, "vendedor");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+            try
+            {
+                m.NombreVendedor = Tools.ToString(dr, "nombrevendedor");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.PuntosEfectivos = Tools.ToInt32(dr, "PuntoEfec");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+            try
+            {
+                m.PuntosPedidos = Tools.ToInt32(dr, "PuntoPed");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+            try
+            {
+                m.PuntosRedimidos = Tools.ToInt32(dr, "PuntoRed");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+            try
+            {
+                m.PuntosTotal = Tools.ToInt32(dr, "Total");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            return m;
+        }
+
         #endregion
 
         #region "Clasificacion por valor"

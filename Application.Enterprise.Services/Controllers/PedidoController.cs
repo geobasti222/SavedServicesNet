@@ -1373,6 +1373,128 @@ namespace Application.Enterprise.Services.Controllers
 
         }
 
+
+        [HttpGet]
+        [HttpPost]
+        public List<PedidosClienteInfo> PedidosAnuladosListLider(PedidosClienteInfo ObjPedidosClienteInfoRequest)
+        {
+
+            List<PedidosClienteInfo> lista = new List<PedidosClienteInfo>(); ;
+            PedidosCliente module = new PedidosCliente("conexion");
+
+            //--------------------------------------------------------------------------------------------------------
+            CampanaInfo objCampanaInfo = new CampanaInfo();
+            Campana objCampana = new Campana("conexion");
+
+            if (ObjPedidosClienteInfoRequest.Campana != null && ObjPedidosClienteInfoRequest.Campana != "")
+            {
+                //objCampanaInfo = objCampana.ListxCampana(ObjPedidosClienteInfoRequest.Campana);
+                objCampanaInfo = objCampana.ListxGetDate();
+            }
+            else
+            {
+                objCampanaInfo = objCampana.ListxGetDate();
+            }
+            //--------------------------------------------------------------------------------------------------------
+            lista = module.ListPedidosAnuladosLider( objCampanaInfo.Campana, ObjPedidosClienteInfoRequest.IdLider);
+           
+
+            if (lista != null && lista.Count > 0)
+            {
+
+            }
+            else
+            {
+                lista = new List<PedidosClienteInfo>();
+            }
+
+
+            return lista;
+
+
+        }
+
+        [HttpGet]
+        [HttpPost]
+        public List<PedidosClienteInfo> PedidosAnuladosListDirector(PedidosClienteInfo ObjPedidosClienteInfoRequest)
+        {
+
+            List<PedidosClienteInfo> lista = new List<PedidosClienteInfo>(); ;
+            PedidosCliente module = new PedidosCliente("conexion");
+
+            //--------------------------------------------------------------------------------------------------------
+            CampanaInfo objCampanaInfo = new CampanaInfo();
+            Campana objCampana = new Campana("conexion");
+
+            if (ObjPedidosClienteInfoRequest.Campana != null && ObjPedidosClienteInfoRequest.Campana != "")
+            {
+                //objCampanaInfo = objCampana.ListxCampana(ObjPedidosClienteInfoRequest.Campana);
+                objCampanaInfo = objCampana.ListxGetDate();
+            }
+            else
+            {
+                objCampanaInfo = objCampana.ListxGetDate();
+            }
+            //--------------------------------------------------------------------------------------------------------
+            lista = module.ListPedidosAnulados(objCampanaInfo.Campana, ObjPedidosClienteInfoRequest.IdVendedor);
+
+
+            if (lista != null && lista.Count > 0)
+            {
+
+            }
+            else
+            {
+                lista = new List<PedidosClienteInfo>();
+            }
+
+
+            return lista;
+
+
+        }
+
+        [HttpGet]
+        [HttpPost]
+        public List<PedidosClienteInfo> PedidosAnuladosListEmpresaria(PedidosClienteInfo ObjPedidosClienteInfoRequest)
+        {
+
+            List<PedidosClienteInfo> lista = new List<PedidosClienteInfo>(); ;
+            PedidosCliente module = new PedidosCliente("conexion");
+
+            //--------------------------------------------------------------------------------------------------------
+            CampanaInfo objCampanaInfo = new CampanaInfo();
+            Campana objCampana = new Campana("conexion");
+
+            if (ObjPedidosClienteInfoRequest.Campana != null && ObjPedidosClienteInfoRequest.Campana != "")
+            {
+                //objCampanaInfo = objCampana.ListxCampana(ObjPedidosClienteInfoRequest.Campana);
+                objCampanaInfo = objCampana.ListxGetDate();
+            }
+            else
+            {
+                objCampanaInfo = objCampana.ListxGetDate();
+            }
+            //--------------------------------------------------------------------------------------------------------
+            lista = module.ListPedidosAnuladosxNit(objCampanaInfo.Campana, ObjPedidosClienteInfoRequest.Nit);
+
+
+            if (lista != null && lista.Count > 0)
+            {
+
+            }
+            else
+            {
+                lista = new List<PedidosClienteInfo>();
+            }
+
+
+            return lista;
+
+
+        }
+
+
         [HttpGet]
         [HttpPost]
         public List<PedidosClienteInfo> ListxGerenteZonaFacturados(PedidosClienteInfo ObjPedidosClienteInfoRequest)

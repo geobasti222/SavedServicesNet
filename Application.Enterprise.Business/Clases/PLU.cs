@@ -86,6 +86,15 @@ namespace Application.Enterprise.Business
         {
             return module.ListxArticulosxPLUxTipoPrecioJUTA(PLU, TipoPrecio, campana);
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public List<PLUInfo> ListCatalogoActual(string Campana)
+        {
+            return module.ListCatalogoActual(Campana);
+        }
         #endregion
     }
 }
