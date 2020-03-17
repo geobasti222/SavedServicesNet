@@ -17,6 +17,11 @@ namespace Application.Enterprise.CommonObjects.Interfaces
         /// <returns></returns>
         List<EPuntosInfo> ListPuntosEmpresarias(string Nit, string Lider, string Vendedor);
 
+        /// <summary>
+        /// Lista todos los Puntos por Empresaria).
+        /// </summary>
+        /// <returns></returns>
+        List<EPuntosInfo> ListDetallePuntosEmpresarias(string Nit);
 
 
         #endregion
