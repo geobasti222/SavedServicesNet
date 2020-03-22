@@ -924,7 +924,7 @@ namespace Application.Enterprise.Data
             }
             try
             {
-                m.Ciudad = Tools.ToString(dr, "ciudad");
+                m.CodCiudad = Tools.ToString(dr, "ciudad");
             }
             catch (Exception ex)
             {
@@ -1072,7 +1072,31 @@ namespace Application.Enterprise.Data
             {
                 System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
             }
+            try
+            {
+                m.Ciudad = Tools.ToString(dr, "nombreciudad");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
 
+            try
+            {
+                m.Departamento = Tools.ToString(dr, "nombreEstado");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+            try
+            {
+                m.CodDepartamento = Tools.ToString(dr, "codEstado");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
 
             return m;
         }
@@ -13729,6 +13753,14 @@ namespace Application.Enterprise.Data
                 System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
             }
 
+            try
+            {
+                m.OperadorLogistico = Tools.ToString(dr, "operador");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
 
             return m;
         }

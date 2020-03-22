@@ -1286,8 +1286,16 @@ namespace Application.Enterprise.CommonObjects
             get { return pagarfletepuntos; }
             set { pagarfletepuntos = value; }
         }
-      
 
+        private string operadorlogistico;
+        /// <summary>
+        /// 
+        /// </summary>
+        public string OperadorLogistico
+        {
+            get { return operadorlogistico; }
+            set { operadorlogistico = value; }
+        }
         public virtual Error Error
         {
             get;
