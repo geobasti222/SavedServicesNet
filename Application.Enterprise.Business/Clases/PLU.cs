@@ -91,7 +91,7 @@ namespace Application.Enterprise.Business
         /// 
         /// </summary>
         /// <returns></returns>
-        public List<PLUInfo> ListCatalogoActual(string Campana)
+        public List<PLUInfoDto> ListCatalogoActual(string Campana)
         {
             return module.ListCatalogoActual(Campana);
         }

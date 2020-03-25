@@ -324,17 +324,17 @@ namespace Application.Enterprise.Data
         /// Lista todos los PLU existentes.
         /// </summary>
         /// <returns></returns>
-        public List<PLUInfo> ListCatalogoActual(string Campana)
+        public List<PLUInfoDto> ListCatalogoActual(string Campana)
         {
             db.SetParameterValue(commandPLU, "i_operation", 'S');
             db.SetParameterValue(commandPLU, "i_option", 'E');
             db.SetParameterValue(commandPLU, "i_campana", Campana);
 
-            List<PLUInfo> col = new List<PLUInfo>();
+            List<PLUInfoDto> col = new List<PLUInfoDto>();
 
             IDataReader dr = null;
 
-            PLUInfo m = null;
+            PLUInfoDto m = null;
 
             try
             {
@@ -342,7 +342,7 @@ namespace Application.Enterprise.Data
 
                 while (dr.Read())
                 {
-                    m = Factory.GetCatalogovigente (dr);
+                    m = Factory.GetCatalogovigenteDTO(dr);
 
                     col.Add(m);
                 }

@@ -21784,6 +21784,62 @@ namespace Application.Enterprise.Data
         /// Crea un objeto de PLU
         /// </summary>
         /// <param name="dr"></param>
+        internal static PLUInfoDto GetCatalogovigenteDTO(IDataReader dr)
+        {
+            PLUInfoDto m = new PLUInfoDto();
+
+            try
+            {
+                m.PLU = Tools.ToInt32(dr, "plu");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+
+            try
+            {
+                m.NombreProducto = Tools.ToString(dr, "nombreproducto");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }                   
+            try
+            {
+                m.Imagen = Tools.ToString(dr, "IMAGEN");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+            try
+            {
+                m.NombreColor = Tools.ToString(dr, "nombrecolor");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+            try
+            {
+                m.NombreTalla = Tools.ToString(dr, "nombretalla");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+            }
+            return m;
+        }
+
+
+
+
+
+        /// <summary>
+        /// Crea un objeto de PLU
+        /// </summary>
+        /// <param name="dr"></param>
         internal static PLUInfo GetArticuloxPLUxTipoPrecio(IDataReader dr)
         {
             PLUInfo m = new PLUInfo();

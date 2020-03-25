@@ -196,6 +196,7 @@
     <Compile Include="Clases\KardexInfo.cs" />
     <Compile Include="Clases\LiberarMemoriaSQLInfo.cs" />
     <Compile Include="Clases\LideresInfo.cs" />
+    <Compile Include="Clases\PLUInfoDto.cs" />
     <Compile Include="Clases\PuntosSavedInfo.cs" />
     <Compile Include="Clases\LiderInfo.cs" />
     <Compile Include="Clases\LocalidadInfo.cs" />
