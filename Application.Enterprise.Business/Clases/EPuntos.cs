@@ -35,21 +35,33 @@ namespace Application.Enterprise.Business
         }
 
         #region Miembros de IEPuntos
-       
 
-         
+
+
 
         /// <summary>
         /// Lista el saldo de cartera de una empresaria por nit y por mes.
         /// </summary>
+        /// <param name="Lider"></param>
         /// <param name="Vendedor"></param>
+        /// <param name="Nit"></param>
         /// <returns></returns>
         public List<EPuntosInfo> ListPuntosEmpresarias(string Nit, string Lider,string Vendedor)
         {
             return module.ListPuntosEmpresarias(Nit,Lider,Vendedor);
         }
 
-    
+
+        /// <summary>
+        /// Lista el saldo de cartera de una empresaria por nit y por mes.
+        /// </summary>
+        /// <param name="Nit"></param>
+        /// <returns></returns>
+        public List<EPuntosInfo> ListDetallePuntosEmpresarias(string Nit)
+        {
+            return module.ListDetallePuntosEmpresarias(Nit);
+        }
+
         #endregion
     }
 }
