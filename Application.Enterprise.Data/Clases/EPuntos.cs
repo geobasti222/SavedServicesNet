@@ -126,6 +126,56 @@ namespace Application.Enterprise.Data
             return col;
         }
 
+        /// <summary>
+        /// Lista el saldo de cartera de Lideres por nit .
+        /// </summary>
+        /// <param name="Vendedor"></param>
+        /// <returns></returns>
+        public List<EPuntosInfo> ListDetallePuntosEmpresarias(string Nit)
+        {
+            db.SetParameterValue(commandEPuntos, "i_operation", 'S');
+            db.SetParameterValue(commandEPuntos, "i_option", 'B');
+            db.SetParameterValue(commandEPuntos, "i_nit", Nit);
+
+
+            List<EPuntosInfo> col = new List<EPuntosInfo>();
+
+            IDataReader dr = null;
+
+            EPuntosInfo m = null;
+
+            try
+            {
+                dr = db.ExecuteReader(commandEPuntos);
+
+                while (dr.Read())
+                {
+                    m = Factory.GetPuntosDetalleEmpresaria(dr);
+                    col.Add(m);
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(string.Format("NIVI Error: {0} , NameSpace: {1}, Clase: {2}, Metodo: {3} ", ex.Message, MethodBase.GetCurrentMethod().DeclaringType.Namespace, MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name));
+
+                bool rethrow = ExceptionPolicy.HandleException(ex, "DataAccess Policy");
+
+                if (rethrow)
+                {
+                    throw;
+                }
+            }
+            finally
+            {
+                if (dr != null)
+                {
+                    dr.Close();
+                }
+            }
+
+            return col;
+        }
+
 
 
 

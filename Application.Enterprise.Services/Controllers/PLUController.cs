@@ -10,6 +10,7 @@ using System.Net.Http;
 using System.Web.Http;
 using static Application.Enterprise.CommonObjects.Enumerations;
 using System.Web.Http.Cors;
+using System.Linq;
 
 namespace Application.Enterprise.Services.Controllers
 {
@@ -110,7 +111,7 @@ namespace Application.Enterprise.Services.Controllers
                     }
 
                     PrecioTotal = PrecioUnitario * Cantidad;
-                    CantidadSeleccionada = Cantidad;                    
+                    CantidadSeleccionada = Cantidad;
                     objPLU.Cantidad = Cantidad;
 
                     //---------------------------------------------------------------------------------------
@@ -142,7 +143,7 @@ namespace Application.Enterprise.Services.Controllers
                     decimal ivaprecioempresaria = 0;
                     if (ReferenceEquals(info, null))
                     {
-                        
+
                         descuento = 0M;
                         objPLU.Disponible = false;
                         precioempsiniva = 0;
@@ -163,7 +164,7 @@ namespace Application.Enterprise.Services.Controllers
                     }
                     else
                     {
-                        
+
                         descuento = 0M;
                         precioempsiniva = 0;
                         ivaprecioempresaria = 0;
@@ -244,18 +245,16 @@ namespace Application.Enterprise.Services.Controllers
 
         [HttpGet]
         [HttpPost]
-        public List<PLUInfo> ListCatalogoActual(PLUInfo ObjPluInfoRequest)
+        public IEnumerable<PLUInfoDto> ListCatalogoActual(PLUInfo ObjPluInfoRequest)
         {
 
             List<PLUInfo> lista = new List<PLUInfo>(); ;
+
+            IEnumerable<PLUInfoDto> ListaDto;
             PLU module = new PLU("conexion");
-
             //--------------------------------------------------------------------------------------------------------
-
-
             //--------------------------------------------------------------------------------------------------------
-            lista = module.ListCatalogoActual(ObjPluInfoRequest.Campana);
-
+            ListaDto = module.ListCatalogoActual(ObjPluInfoRequest.Campana);
 
             if (lista != null && lista.Count > 0)
             {
@@ -267,7 +266,7 @@ namespace Application.Enterprise.Services.Controllers
             }
 
 
-            return lista;
+            return ListaDto;
 
 
         }

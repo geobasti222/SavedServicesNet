@@ -101,5 +101,17 @@ namespace Application.Enterprise.Services.Controllers
             return reg;
         }
 
+        [HttpGet]
+        [HttpPost]
+        public RegionalesInfo RegionalxZona(string Zona)
+        {
+            RegionalesInfo reg = null;
+            Application.Enterprise.Business.Regionales module = new Application.Enterprise.Business.Regionales("conexion");
+
+            reg = module.ListxZona(Zona);
+
+            return reg;
+        }
+
     }
 }

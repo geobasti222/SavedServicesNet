@@ -50,6 +50,37 @@ namespace Application.Enterprise.Services.Controllers
         }
 
 
+        [HttpGet]
+        [HttpPost]
+        public List<EPuntosInfo> ListDetallePuntosEmpresarias(EPuntosInfo ObjPedidosEPuntosInfoRequest)
+        {
+
+            List<EPuntosInfo> lista = new List<EPuntosInfo>(); ;
+            EPuntos module = new EPuntos("conexion");
+
+            //--------------------------------------------------------------------------------------------------------
+
+
+            //--------------------------------------------------------------------------------------------------------
+            lista = module.ListDetallePuntosEmpresarias(ObjPedidosEPuntosInfoRequest.Nit);
+
+
+            if (lista != null && lista.Count > 0)
+            {
+
+            }
+            else
+            {
+                lista = new List<EPuntosInfo>();
+            }
+
+
+            return lista;
+
+
+        }
+
+
 
 
     }

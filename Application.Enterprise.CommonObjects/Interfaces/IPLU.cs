@@ -45,7 +45,7 @@ namespace Application.Enterprise.CommonObjects.Interfaces
         /// </summary>
         /// <param name="Referencia"></param>
         /// <returns></returns>
-        List<PLUInfo> ListCatalogoActual(string Campana);
+        List<PLUInfoDto> ListCatalogoActual(string Campana);
 
 
         #endregion

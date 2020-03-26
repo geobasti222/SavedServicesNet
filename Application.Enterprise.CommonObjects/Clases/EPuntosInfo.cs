@@ -121,6 +121,88 @@ namespace Application.Enterprise.CommonObjects
             get { return puntostotal; }
             set { puntostotal = value; }
         }
+
+        private string tipo;
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Tipo
+        {
+            get { return tipo; }
+            set { tipo = value; }
+        }
+        private string campana;
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Campana
+        {
+            get { return campana; }
+            set { campana = value; }
+        }
+        private string numero;
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Numero
+        {
+            get { return numero; }
+            set { numero = value; }
+        }
+        private string tipo2;
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Tipo2
+        {
+            get { return tipo2; }
+            set { tipo2 = value; }
+        }
+        private int cantidad;
+        /// <summary>
+        /// 
+        /// </summary>
+        public int Cantidad
+        {
+            get { return cantidad; }
+            set { cantidad = value; }
+        }
+        private DateTime fecha;
+        /// <summary>
+        /// 
+        /// </summary>
+        public DateTime Fecha
+        {
+            get { return fecha; }
+            set { fecha = value; }
+        }
+        private string movimiento;
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Movimiento
+        {
+            get { return movimiento; }
+            set { movimiento = value; }
+        }
+        private string concepto;
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Concepto
+        {
+            get { return concepto; }
+            set { concepto = value; }
+        }
+        private string estadoempresaria;
+        /// <summary>
+        /// 
+        /// </summary>
+        public string EstadoEmpresaria
+        {
+            get { return estadoempresaria; }
+            set { estadoempresaria = value; }
+        }
         public virtual Error Error
         {
             get;
